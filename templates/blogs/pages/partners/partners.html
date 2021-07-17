@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+<style>
+    .partnerss__page h3 {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+
+
+{% block content %}
+
+
+    <section class="all__news" style="background: url('{% static 'assets/images/bannerimg.png' %}')">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-12">
+                    {% for item in partner %}
+                        <div class="heading_news-all">
+                        <h1>{{ item.title }}</h1>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container mt-5">
+
+    <div class="row">
+         <div class="col-lg-12">
+            <h1 class="faq__title">{% trans 'Partners' %}</h1>
+            <div class="border__faq mx-auto"></div>
+        </div>
+
+        {% for item in partner %}
+            <div class="col-lg-4 col-md-6 col-12 pro___card mt-2">
+                <div class="card__head h-100 bg-white shadow">
+
+                    <div class="card card-fath">
+                        <img class="image__proo" src="{{ item.image.url }}" alt="{{ item.name_of_partner }}">
+                    </div>
+                    <div class="card-body-description px-4">
+                        <h5>{{ item.name_of_partner }}</h5>
+                        <p>{% trans 'Adress' %}</p>
+                        <p>{{ item.adress }}</p>
+
+                        <p>{% trans 'Phone' %}</p>
+                        <p>{{ item.telefon }}</p>
+
+                        <p>email</p>
+                        <p>{{ item.email }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock content %}

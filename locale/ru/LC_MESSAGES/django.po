@@ -1,0 +1,2761 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-14 12:22+0500\n"
+"PO-Revision-Date: 2021-06-30 18:12+0437\n"
+"Last-Translator: b'  <>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
+
+#: blogs/admin.py:11
+msgid "Uzcharmsanoat admin panel"
+msgstr "Узчармсаноат"
+
+#: blogs/admin.py:12
+msgid "Uzcharmsanoat Admin Portal"
+msgstr "Ассоциация Узчармсаноат"
+
+#: blogs/admin.py:13
+msgid "Welcome to Uzcharmsanoat Portal"
+msgstr "Добро пожаловать в Узчармсаноат"
+
+#: blogs/models.py:37 blogs/models.py:650 blogs/models.py:676
+#: blogs/models.py:716 blogs/models.py:729 blogs/models.py:742
+#: blogs/models.py:755 blogs/models.py:768 blogs/models.py:781
+#: blogs/models.py:794 blogs/models.py:807 blogs/models.py:819
+#: blogs/models.py:835 blogs/models.py:851 blogs/models.py:867
+#: blogs/models.py:883 blogs/models.py:899 blogs/models.py:913
+#: blogs/models.py:927 blogs/models.py:940 blogs/models.py:954
+#: blogs/models.py:973
+msgid "title"
+msgstr "заглавие"
+
+#: blogs/models.py:38
+msgid " short_description"
+msgstr "Краткое описание"
+
+#: blogs/models.py:39 blogs/models.py:73 blogs/models.py:101
+#: blogs/models.py:176 blogs/models.py:432 blogs/models.py:551
+#: blogs/models.py:565
+msgid "Full text"
+msgstr "Полный текст"
+
+#: blogs/models.py:48
+msgid "status"
+msgstr "статус"
+
+#: blogs/models.py:58
+msgid "Post"
+msgstr "Новость"
+
+#: blogs/models.py:59
+msgid "Posts"
+msgstr "Новости"
+
+#: blogs/models.py:71 blogs/models.py:550 blogs/models.py:564
+#: blogs/models.py:690
+msgid "Title"
+msgstr "заглавие"
+
+#: blogs/models.py:72
+msgid "Short description"
+msgstr "Краткое описание"
+
+#: blogs/models.py:91
+msgid "Tender"
+msgstr "Пол"
+
+#: blogs/models.py:92
+msgid "Tenders"
+msgstr "Пол"
+
+#: blogs/models.py:118
+msgid "Product"
+msgstr "Товары"
+
+#: blogs/models.py:119
+msgid "Products"
+msgstr "Товары"
+
+#: blogs/models.py:130 blogs/models.py:145
+msgid "Website link"
+msgstr "Ссылка на веб-сайт"
+
+#: blogs/models.py:136
+msgid "Useful Link"
+msgstr "Полезная ссылка"
+
+#: blogs/models.py:137
+msgid "Useful Links"
+msgstr "Полезные ссылки"
+
+#: blogs/models.py:151
+msgid "Expo Link"
+msgstr "Ссылка на выставку"
+
+#: blogs/models.py:152
+msgid "Expo Links"
+msgstr "Ссылки на выставки"
+
+#: blogs/models.py:158
+#, fuzzy
+#| msgid "Address"
+msgid "adress"
+msgstr "Адрес"
+
+#: blogs/models.py:169
+msgid "Partner"
+msgstr "Партнер"
+
+#: blogs/models.py:170 templates/blogs/pages/partners/partners.html:35
+msgid "Partners"
+msgstr "Партнеры"
+
+#: blogs/models.py:184
+msgid "Vacancy"
+msgstr "Вакансии"
+
+#: blogs/models.py:185
+msgid "Vacancys"
+msgstr "Вакансии"
+
+#: blogs/models.py:203
+msgid "Gallery Category"
+msgstr "Категория галереи"
+
+#: blogs/models.py:204
+msgid "Gallery Categorys"
+msgstr "Категории галереи"
+
+#: blogs/models.py:233
+msgid "Gallery Image"
+msgstr "Изображение галереи"
+
+#: blogs/models.py:234
+msgid "Gallery Images"
+msgstr "Галерея изображений"
+
+#: blogs/models.py:249 blogs/models.py:250
+msgid "Media"
+msgstr "Медиа"
+
+#: blogs/models.py:267
+msgid "Infographic"
+msgstr "Инфографика"
+
+#: blogs/models.py:268
+msgid "Infographics"
+msgstr "Инфографики"
+
+#: blogs/models.py:274 blogs/models.py:291 blogs/models.py:308
+#: blogs/models.py:583 blogs/models.py:663
+msgid "Content"
+msgstr "Содержание"
+
+#: blogs/models.py:284
+msgid "Static Content"
+msgstr "Содержание"
+
+#: blogs/models.py:285
+msgid "Static Contents"
+msgstr "Статистика"
+
+#: blogs/models.py:301
+msgid "Legal Document"
+msgstr "Нормативно-правовые документы"
+
+#: blogs/models.py:302
+msgid "Legal Documents"
+msgstr "Нормативно-правовые документы"
+
+#: blogs/models.py:318
+msgid "Statistic"
+msgstr "Статистика"
+
+#: blogs/models.py:319 templates/blogs/index.html:221
+#: templates/blogs/pages/statistics/list.html:11
+#: templates/blogs/pages/statistics/list.html:22
+msgid "Statistics"
+msgstr "Статистика"
+
+#: blogs/models.py:334
+msgid "Menu item"
+msgstr "Пункт меню"
+
+#: blogs/models.py:335
+msgid "Menu items"
+msgstr "Пункты меню"
+
+#: blogs/models.py:350
+msgid "ShortLink item"
+msgstr "Элемент короткой ссылки"
+
+#: blogs/models.py:351
+msgid "ShortLink items"
+msgstr "Элементы короткой ссылки"
+
+#: blogs/models.py:372
+msgid "Staff"
+msgstr "Персонал"
+
+#: blogs/models.py:373
+msgid "Staffs"
+msgstr "Персонал"
+
+#: blogs/models.py:379
+msgid "content about us"
+msgstr "контент о нас"
+
+#: blogs/models.py:380
+msgid "history about us"
+msgstr "история о нас"
+
+#: blogs/models.py:382
+msgid "company_structure"
+msgstr "структура компании"
+
+#: blogs/models.py:383
+msgid "company_report"
+msgstr "отчет компании"
+
+#: blogs/models.py:388
+msgid "Company Info"
+msgstr "Учредители компании"
+
+#: blogs/models.py:389
+msgid "Company Infos"
+msgstr "Учредители компании"
+
+#: blogs/models.py:401 blogs/models.py:402
+msgid "FAQ"
+msgstr "Часто задаваемые вопросы"
+
+#: blogs/models.py:420
+msgid "Site Setting"
+msgstr "Пункты меню"
+
+#: blogs/models.py:421
+msgid "Site Settings"
+msgstr "Пункты меню"
+
+#: blogs/models.py:451
+msgid "Exhibition"
+msgstr "Выставки и ярмарки"
+
+#: blogs/models.py:452
+msgid "Exhibitions"
+msgstr "Выставки и ярмарки"
+
+#: blogs/models.py:497 blogs/models.py:498 templates/base.html:39
+msgid "Virtual Reception"
+msgstr "Виртуальная Приемная"
+
+#: blogs/models.py:514 blogs/models.py:542
+msgid "Request form: Contact form data"
+msgstr "Форма запроса: Данные контактной формы"
+
+#: blogs/models.py:515 blogs/models.py:543
+msgid "Request forms: Contact form data"
+msgstr "Формы запроса: Данные контактной формы"
+
+#: blogs/models.py:521 blogs/models.py:535
+msgid "full_name"
+msgstr "ФИО"
+
+#: blogs/models.py:523
+msgid "phone_number"
+msgstr "Номер телефона"
+
+#: blogs/models.py:524 blogs/models.py:538
+msgid "subject"
+msgstr "предмет"
+
+#: blogs/models.py:530 templates/base.html:45
+#: templates/blogs/pages/contact_page/contact_form.html:10
+#: templates/blogs/pages/contact_page/contact_form.html:31
+msgid "Contact"
+msgstr "Контакты"
+
+#: blogs/models.py:531
+msgid "Contacts"
+msgstr "Контакты"
+
+#: blogs/models.py:536
+msgid "phone"
+msgstr "Телефон"
+
+#: blogs/models.py:558 templates/blogs/pages/about/indexAbout.html:43
+#: templates/blogs/pages/about/indexAbout.html:118
+msgid "Legislation"
+msgstr "Законодательство"
+
+#: blogs/models.py:559
+msgid "Legislations"
+msgstr "Законодательство"
+
+#: blogs/models.py:572 blogs/models.py:573
+#: templates/blogs/pages/about/indexAbout.html:44
+#: templates/blogs/pages/about/indexAbout.html:130
+msgid "Regional Administration"
+msgstr "Региональная администрация"
+
+#: blogs/models.py:579
+msgid "Logo text"
+msgstr "Текст логотипа"
+
+#: blogs/models.py:580
+msgid "Logo text footer"
+msgstr "Нижний колонтитул текста логотипа"
+
+#: blogs/models.py:581 templates/base.html:339
+#: templates/blogs/pages/membership/detail.html:32
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:69
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:52
+msgid "Address"
+msgstr "Адрес"
+
+#: blogs/models.py:582
+msgid "Operating Mode"
+msgstr "Режим работы"
+
+#: blogs/models.py:584
+msgid "Home Page Text"
+msgstr "Текст домашней страницы"
+
+#: blogs/models.py:586
+#: venv/Lib/site-packages/django/db/models/fields/files.py:360
+msgid "Image"
+msgstr "Картинка"
+
+#: blogs/models.py:587
+msgid "Tel First"
+msgstr "Первый номер"
+
+#: blogs/models.py:588
+msgid "Tel Second"
+msgstr "Второй номер"
+
+#: blogs/models.py:589
+msgid "Tel Third"
+msgstr "Третий телефон"
+
+#: blogs/models.py:590
+msgid "Tel Fourth"
+msgstr "Четвертый телефон"
+
+#: blogs/models.py:593
+msgid "Since"
+msgstr "Годы работы"
+
+#: blogs/models.py:600
+msgid "Home Page GIF"
+msgstr "Домашняя страница GIF"
+
+#: blogs/models.py:603 blogs/models.py:604
+msgid "Menu Settings"
+msgstr "Пункты меню"
+
+#: blogs/models.py:609
+msgid "Andijan"
+msgstr "Андижан"
+
+#: blogs/models.py:610
+msgid "Bukhara"
+msgstr "Бухара"
+
+#: blogs/models.py:611
+msgid "Fergana"
+msgstr "Фергана"
+
+#: blogs/models.py:612
+msgid "Jizzakh"
+msgstr "Джизак"
+
+#: blogs/models.py:613
+msgid "Xorazm"
+msgstr "Хорезм"
+
+#: blogs/models.py:614
+msgid "Namangan"
+msgstr "Наманган"
+
+#: blogs/models.py:615
+msgid "Navoiy"
+msgstr "Наваи"
+
+#: blogs/models.py:616
+msgid "Qashqadaryo"
+msgstr "Кашкадарья"
+
+#: blogs/models.py:617
+msgid "Samarqand"
+msgstr "Самарканд"
+
+#: blogs/models.py:618
+msgid "Sirdaryo"
+msgstr "Сирдарья"
+
+#: blogs/models.py:619
+msgid "Guliston"
+msgstr "Гулистан"
+
+#: blogs/models.py:620
+msgid "Surxondaryo"
+msgstr "Сурхандарья"
+
+#: blogs/models.py:621
+msgid "TashkentRegion"
+msgstr "Ташкентская область"
+
+#: blogs/models.py:622
+msgid "Karakalpakstan"
+msgstr "Каракалпакстан"
+
+#: blogs/models.py:623
+msgid "Tashkentt"
+msgstr "Ташкент"
+
+#: blogs/models.py:625
+msgid "AndijanNumber"
+msgstr "Андижанский номер"
+
+#: blogs/models.py:626
+msgid "BukharaNumber"
+msgstr "Бухарский номер"
+
+#: blogs/models.py:627
+msgid "FerganaNumber"
+msgstr "Номер Фергана"
+
+#: blogs/models.py:628
+msgid "JizzakhNumber"
+msgstr "Джизакский номер"
+
+#: blogs/models.py:629
+msgid "XorazmNumber"
+msgstr "Номер Хорезма"
+
+#: blogs/models.py:630
+msgid "NamanganNumber"
+msgstr "Наманганский номер"
+
+#: blogs/models.py:631
+msgid "NavoiyNumber"
+msgstr "Номер Навои"
+
+#: blogs/models.py:632
+msgid "QashqadaryoNumber"
+msgstr "Кашкадарьинский номер"
+
+#: blogs/models.py:633
+msgid "SamarqandNumber"
+msgstr "Самаркандский номер"
+
+#: blogs/models.py:634
+msgid "SirdaryoNumber"
+msgstr "Сырдарьинский номер"
+
+#: blogs/models.py:635
+msgid "SurxondaryoNumber"
+msgstr "Сурхондарьинский номер"
+
+#: blogs/models.py:636
+msgid "TashkentNumber"
+msgstr "Номер Ташкента"
+
+#: blogs/models.py:637
+msgid "GulistonNumber"
+msgstr "Число Гулистона"
+
+#: blogs/models.py:639
+msgid "KarakalpakstanNumber"
+msgstr "Номер Каракалпакстана"
+
+#: blogs/models.py:641
+msgid "TashkentRegionNumber"
+msgstr "Номер Ташкентской области"
+
+#: blogs/models.py:644
+msgid "Region"
+msgstr "область"
+
+#: blogs/models.py:645
+msgid "Regions"
+msgstr "Разделы"
+
+#: blogs/models.py:652
+msgid "link"
+msgstr "ссылка"
+
+#: blogs/models.py:658
+msgid "Menu Overlay"
+msgstr "Оверлей меню"
+
+#: blogs/models.py:670
+msgid "How to join"
+msgstr ""
+
+#: blogs/models.py:675
+msgid "stir"
+msgstr ""
+
+#: blogs/models.py:677
+#, fuzzy
+#| msgid "Region"
+msgid "region"
+msgstr "область"
+
+#: blogs/models.py:685
+#, fuzzy
+#| msgid "Company Infos"
+msgid "Menu Companys"
+msgstr "Учредители компании"
+
+#: blogs/models.py:698
+msgid "Benefits"
+msgstr ""
+
+#: blogs/models.py:711
+#, fuzzy
+#| msgid "Company Structure"
+msgid "Structure"
+msgstr "Структура компании"
+
+#: blogs/models.py:717 blogs/models.py:730 blogs/models.py:743
+#: blogs/models.py:756 blogs/models.py:769 blogs/models.py:782
+#: blogs/models.py:795 blogs/models.py:808 blogs/models.py:820
+#: blogs/models.py:836 blogs/models.py:852 blogs/models.py:868
+#: blogs/models.py:884 blogs/models.py:900 blogs/models.py:914
+#: blogs/models.py:928 blogs/models.py:941 blogs/models.py:955
+#: blogs/models.py:974
+#, fuzzy
+#| msgid "Content"
+msgid "content"
+msgstr "Содержание"
+
+#: blogs/models.py:724
+#, fuzzy
+#| msgid "Head of organization"
+msgid "History of Organization"
+msgstr "Руководитель организации"
+
+#: blogs/models.py:737
+#, fuzzy
+#| msgid "Regional Administration"
+msgid "Territorial Administration"
+msgstr "Региональная администрация"
+
+#: blogs/models.py:750
+msgid "Subsidaries"
+msgstr ""
+
+#: blogs/models.py:763
+msgid "Subsidaries2"
+msgstr ""
+
+#: blogs/models.py:776
+msgid "Foreighn Representation"
+msgstr ""
+
+#: blogs/models.py:789
+msgid "Press service"
+msgstr ""
+
+#: blogs/models.py:802
+msgid "Moscow"
+msgstr ""
+
+#: blogs/models.py:830
+msgid "Investment potential"
+msgstr ""
+
+#: blogs/models.py:846
+#, fuzzy
+#| msgid "Export volume"
+msgid "Export Potential"
+msgstr "Объем экспорта"
+
+#: blogs/models.py:862
+msgid "Export Implementation"
+msgstr ""
+
+#: blogs/models.py:878
+#, fuzzy
+#| msgid "Expo Link"
+msgid "Export Law"
+msgstr "Ссылка на выставку"
+
+#: blogs/models.py:894
+msgid "Market entry strategies"
+msgstr ""
+
+#: blogs/models.py:908
+#: templates/blogs/pages/presentations/presentations.html:36
+#: templates/blogs/pages/presentations/presentations.html:50
+#, fuzzy
+#| msgid "Legislations"
+msgid "Presentations"
+msgstr "Законодательство"
+
+#: blogs/models.py:922
+msgid "Press Releases"
+msgstr ""
+
+#: blogs/models.py:935
+msgid "Youth Policy"
+msgstr ""
+
+#: blogs/models.py:949 templates/blogs/pages/publications/publications.html:35
+#: templates/blogs/pages/publications/publications.html:49
+#, fuzzy
+#| msgid "Syndication"
+msgid "Publications"
+msgstr "Разделы"
+
+#: blogs/models.py:968
+msgid "Investors"
+msgstr ""
+
+#: blogs/models.py:981
+#, fuzzy
+#| msgid "Export volume"
+msgid "Exporters"
+msgstr "Объем экспорта"
+
+#: blogs/urls.py:11
+msgid "about/"
+msgstr ""
+
+#: blogs/urls.py:13
+msgid "news/"
+msgstr "Все новости"
+
+#: blogs/urls.py:14
+msgid "news/<int:year>/<int:month>/<int:day>/<slug:slug>"
+msgstr ""
+
+#: blogs/urls.py:16
+msgid "tender/"
+msgstr "Пол"
+
+#: blogs/urls.py:17
+msgid "tender/<int:year>/<int:month>/<int:day>/<slug:slug>"
+msgstr ""
+
+#: blogs/urls.py:20
+msgid "product/"
+msgstr "Товары"
+
+#: blogs/urls.py:22
+msgid "membership/"
+msgstr "Преимущества членства"
+
+#: blogs/urls.py:23
+msgid "membership/<slug:slug>"
+msgstr ""
+
+#: blogs/urls.py:25
+msgid "exhibitions/"
+msgstr "Выставки и ярмарки"
+
+#: blogs/urls.py:26
+msgid "exhibitions/<int:year>/<int:month>/<int:day>/<slug:slug>"
+msgstr ""
+
+#: blogs/urls.py:29
+msgid "gallery/"
+msgstr ""
+
+#: blogs/urls.py:32
+msgid "search/"
+msgstr ""
+
+#: blogs/urls.py:34
+msgid "media/"
+msgstr ""
+
+#: blogs/urls.py:36
+msgid "vacancy/"
+msgstr ""
+
+#: blogs/urls.py:38
+msgid "faq/"
+msgstr ""
+
+#: blogs/urls.py:40
+msgid "contact/"
+msgstr "Контакты"
+
+#: blogs/urls.py:42
+msgid "virtual_reception/"
+msgstr ""
+
+#: blogs/urls.py:44
+msgid "entrepreneurs/"
+msgstr ""
+
+#: blogs/urls.py:46
+msgid "press_service"
+msgstr ""
+
+#: blogs/urls.py:49
+msgid "how_to_join/"
+msgstr ""
+
+#: blogs/urls.py:51
+msgid "moscow/"
+msgstr ""
+
+#: blogs/urls.py:53
+msgid "events/"
+msgstr ""
+
+#: blogs/urls.py:55
+#, fuzzy
+#| msgid "Legislations"
+msgid "presentations/"
+msgstr "Законодательство"
+
+#: blogs/urls.py:57
+msgid "press_releases"
+msgstr ""
+
+#: blogs/urls.py:59
+#, fuzzy
+#| msgid "exhibitions/"
+msgid "publications/"
+msgstr "Выставки и ярмарки"
+
+#: blogs/urls.py:61
+#, fuzzy
+#| msgid "membership/"
+msgid "leadership/"
+msgstr ""
+
+#: blogs/urls.py:63
+msgid "investors/"
+msgstr "Инвесторам"
+
+#: blogs/urls.py:65
+#, fuzzy
+#| msgid "Report"
+msgid "exporters/"
+msgstr "Экспортерам"
+
+#: blogs/urls.py:67
+msgid "youth_policy/"
+msgstr ""
+
+#: blogs/urls.py:69
+#, fuzzy
+#| msgid "company_structure"
+msgid "structure/"
+msgstr ""
+
+#: blogs/urls.py:71
+#, fuzzy
+#| msgid "Partners"
+msgid "partners/"
+msgstr ""
+
+#: blogs/urls.py:73
+msgid "foreighn_representation/"
+msgstr ""
+
+#: blogs/urls.py:75
+msgid "subsidaries/"
+msgstr ""
+
+#: blogs/urls.py:77
+msgid "subsidaries2/"
+msgstr ""
+
+#: blogs/urls.py:79
+msgid "territorial_admin/"
+msgstr ""
+
+#: blogs/urls.py:81
+#, fuzzy
+#| msgid "Head of organization"
+msgid "history_of_organization/"
+msgstr ""
+
+#: blogs/urls.py:85
+msgid "membership_procedure/"
+msgstr ""
+
+#: blogs/urls.py:87
+msgid "benefits/"
+msgstr ""
+
+#: blogs/urls.py:89
+msgid "investment_potential/"
+msgstr ""
+
+#: blogs/urls.py:91
+msgid "export_potential/"
+msgstr ""
+
+#: blogs/urls.py:93
+msgid "export_implementation/"
+msgstr ""
+
+#: blogs/urls.py:95
+msgid "export_law/"
+msgstr ""
+
+#: blogs/urls.py:97
+msgid "market_entry_strategies/"
+msgstr ""
+
+#: blogs/urls.py:99
+msgid "content/<slug:slug>"
+msgstr ""
+
+#: blogs/urls.py:103
+msgid "legal/"
+msgstr ""
+
+#: blogs/urls.py:105
+msgid "legal/<slug:slug>"
+msgstr ""
+
+#: blogs/urls.py:107
+msgid "statistic/"
+msgstr ""
+
+#: blogs/urls.py:109
+msgid "statistic/<slug:slug>"
+msgstr ""
+
+#: templates/base.html:118
+msgid "Register"
+msgstr "Регистрация"
+
+#: templates/base.html:122
+msgid "Contact phone number"
+msgstr "Контактный телефон"
+
+#: templates/base.html:131
+msgid "Login"
+msgstr "Логин"
+
+#: templates/base.html:135
+msgid "Helpline"
+msgstr "Телефон доверия"
+
+#: templates/base.html:166 templates/base.html:229
+msgid "Hi"
+msgstr "Привет"
+
+#: templates/base.html:167 templates/base.html:231
+msgid "Edit profile"
+msgstr "Изменить профиль"
+
+#: templates/base.html:168 templates/base.html:232
+msgid "Log out"
+msgstr "Выйти из системы"
+
+#: templates/base.html:310
+#: templates/blogs/pages/contact_page/contact_form.html:49
+#: templates/blogs/pages/membership/detail.html:33
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:74
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:41
+#: templates/users/profile.html:137
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: templates/base.html:349
+msgid "Visitor statistics"
+msgstr "Статистика посетителей"
+
+#: templates/base.html:356
+msgid "Working hours"
+msgstr "Рабочее время"
+
+#: templates/base.html:360
+msgid "Social networks"
+msgstr "Социальные сети"
+
+#: templates/base.html:391
+msgid "Developed by"
+msgstr "Разработано"
+
+#: templates/base.html:403
+msgid "Increasing the font size"
+msgstr "Увеличение размера шрифта"
+
+#: templates/base.html:407
+msgid "Default font size"
+msgstr "Размер шрифта по умолчанию"
+
+#: templates/base.html:411
+msgid "Reduce the font size"
+msgstr "Уменьшение размера шрифта"
+
+#: templates/base.html:415
+msgid "Sound assistance"
+msgstr "Звуковая помощь"
+
+#: templates/base.html:419
+msgid "Grayscale Mode"
+msgstr "Режим оттенков серого"
+
+#: templates/base.html:429
+msgid "Экран сухандони"
+msgstr "Экран suxandoni"
+
+#: templates/base.html:436
+msgid ""
+"Сайтда овозли ўқиш кўрсатмаси <br> <br> Сайтда овозли ўқиш имконияти мавжуд. "
+"Матинни овозли ешитиш учун матин белгиланг."
+msgstr ""
+"Электронное руководство по чтению. На сайте доступно чтение вслух. Выделите "
+"текст, чтобы услышать его вслух."
+
+#: templates/base.html:441
+msgid "Close"
+msgstr "Закрыть"
+
+#: templates/base.html:453
+msgid "Uzcharmsanoat"
+msgstr "Узчармсаноат"
+
+#: templates/blogs/index.html:14
+msgid "Learn more"
+msgstr "Узнать больше"
+
+#: templates/blogs/index.html:88 templates/blogs/index.html:111
+msgid "All news"
+msgstr "Все Новости"
+
+#: templates/blogs/index.html:122
+msgid "PRODUCTS"
+msgstr "ПРОДУКТЫ"
+
+#: templates/blogs/index.html:148 templates/blogs/index.html:176
+#: templates/blogs/index.html:244 templates/blogs/index.html:285
+msgid "more..."
+msgstr "подробнее..."
+
+#: templates/blogs/index.html:161 templates/blogs/pages/gallery/indexG.html:22
+msgid "PHOTO GALLERY"
+msgstr "ФОТОГАЛЕРЕЯ"
+
+#: templates/blogs/index.html:188
+msgid "Media Uzcharmsanoat"
+msgstr "Медиа Узчармсаноат"
+
+#: templates/blogs/index.html:206
+msgid "See all videos"
+msgstr "Смотреть все видео"
+
+#: templates/blogs/index.html:259 templates/blogs/pages/faq/list_view.html:11
+#: templates/blogs/pages/faq/list_view.html:21
+msgid "FAQs"
+msgstr "Часто задаваемые вопросы"
+
+#: templates/blogs/index.html:319
+msgid "Interactive map"
+msgstr "Интерактивная карта"
+
+#: templates/blogs/index.html:463
+msgid "Select a country"
+msgstr "Выберите страну"
+
+#: templates/blogs/index.html:488
+msgid "ASSOCIATION PARTNERS"
+msgstr "ПАРТНЕРЫ АССОЦИАЦИИ"
+
+#: templates/blogs/index.html:512
+msgid "USEFUL LINKS"
+msgstr "ПОЛЕЗНЫЕ ССЫЛКИ"
+
+#: templates/blogs/pages/about/indexAbout.html:20
+#: templates/blogs/pages/about/indexAbout.html:32
+msgid "ABOUT THE ASSOCIATION"
+msgstr "ОБ АССОЦИАЦИИ"
+
+#: templates/blogs/pages/about/indexAbout.html:38
+#: templates/blogs/pages/about/indexAbout.html:52
+msgid "About us"
+msgstr "О нас"
+
+#: templates/blogs/pages/about/indexAbout.html:40
+#: templates/blogs/pages/about/indexAbout.html:85
+msgid "Company Structure"
+msgstr "Структура компании"
+
+#: templates/blogs/pages/about/indexAbout.html:41
+#: templates/blogs/pages/about/indexAbout.html:94
+msgid "Association History"
+msgstr "История ассоциации"
+
+#: templates/blogs/pages/about/indexAbout.html:42
+msgid "Report"
+msgstr "Отчет"
+
+#: templates/blogs/pages/about/indexAbout.html:45
+#: templates/blogs/pages/about/indexAbout.html:142
+msgid "Foreign powers"
+msgstr "Иностранные учредители"
+
+#: templates/blogs/pages/about/indexAbout.html:107
+msgid "REPORTS ON THE ACCOMPLISHED WORK"
+msgstr "ОТЧЕТЫ О ПРОДЕЛАННОЙ РАБОТЕ"
+
+#: templates/blogs/pages/about2/leadership.html:76
+#: templates/blogs/pages/about2/leadership.html:86
+msgid "LEADERSHIP"
+msgstr "РУКОВОДСТВО"
+
+#: templates/blogs/pages/about2/leadership.html:110
+#, fuzzy
+#| msgid "Reception day:"
+msgid "Reception:"
+msgstr "Дни приема:"
+
+#: templates/blogs/pages/about2/leadership.html:116
+msgid "Phone number:"
+msgstr "Номер телефона:"
+
+#: templates/blogs/pages/contact_page/contact_form.html:38
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: templates/blogs/pages/contact_page/contact_form.html:42
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:36
+#: templates/users/profile.html:122 templates/users/register_2.html:27
+msgid "E-mail"
+msgstr "Электронная почта"
+
+#: templates/blogs/pages/contact_page/contact_form.html:53
+msgid "Subject"
+msgstr "Тема"
+
+#: templates/blogs/pages/contact_page/contact_form.html:60
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:83
+msgid "Message"
+msgstr "Сообщение"
+
+#: templates/blogs/pages/contact_page/contact_form.html:67
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:100
+msgid "Send"
+msgstr "Отправить"
+
+#: templates/blogs/pages/contact_page/contact_form.html:83
+msgid "Feedback"
+msgstr "Обратная связь"
+
+#: templates/blogs/pages/exhibition/exhibition_list.html:11
+#: templates/blogs/pages/exhibition/exhibition_list.html:22
+#: templates/blogs/pages/legislation/exhibition_list.html:11
+#: templates/blogs/pages/legislation/exhibition_list.html:22
+msgid "Exhibitions and fairs"
+msgstr "Выставки и ярмарки"
+
+#: templates/blogs/pages/for_entrepreneurs/entrepreneurs.html:11
+#: templates/blogs/pages/for_entrepreneurs/entrepreneurs.html:22
+msgid "List of member enterprises of the association"
+msgstr "Список предприятий-членов ассоциации"
+
+#: templates/blogs/pages/for_entrepreneurs/entrepreneurs.html:28
+msgid "Search by TIN and by company name"
+msgstr "Поиск по ИНН и по названию компании"
+
+#: templates/blogs/pages/for_entrepreneurs/entrepreneurs.html:39
+msgid "TIN"
+msgstr ""
+
+#: templates/blogs/pages/for_entrepreneurs/entrepreneurs.html:40
+msgid "Full name of the organization"
+msgstr "Полное наименование организации"
+
+#: templates/blogs/pages/for_entrepreneurs/entrepreneurs.html:41
+msgid "Territory"
+msgstr "Территория"
+
+#: templates/blogs/pages/gallery/indexG.html:11
+msgid "All photos"
+msgstr "Все фотографии"
+
+#: templates/blogs/pages/legaldocument/detail.html:12
+#: templates/blogs/pages/news/detail.html:14
+#: templates/blogs/pages/static_content/detail.html:12
+#: templates/blogs/pages/statistics/detail.html:12
+msgid "Print"
+msgstr "Печать"
+
+#: templates/blogs/pages/legaldocument/detail.html:36
+#: templates/blogs/pages/news/detail.html:37
+#: templates/blogs/pages/static_content/detail.html:36
+#: templates/blogs/pages/statistics/detail.html:36
+#: templates/blogs/pages/tender/detail.html:28
+msgid "share"
+msgstr "поделиться"
+
+#: templates/blogs/pages/legaldocument/list.html:11
+#: templates/blogs/pages/legaldocument/list.html:22
+msgid "Normative legal documents"
+msgstr "Нормативно-правовые документы"
+
+#: templates/blogs/pages/membership/detail.html:8
+msgid "ТЕРИНИ ҚАЙТА ИШЛАШ ҚОРХОНАЛАРИ"
+msgstr "ПРЕДПРИЯТИЯ ПО ОБРАБОТКЕ КОЖИ"
+
+#: templates/blogs/pages/membership/detail.html:13
+#: templates/blogs/pages/membership/list.html:23
+msgid "Post date:"
+msgstr "Дата публикации:"
+
+#: templates/blogs/pages/membership/detail.html:17
+#: templates/blogs/pages/membership/list.html:27
+msgid "PDF version"
+msgstr "PDF версия"
+
+#: templates/blogs/pages/membership/detail.html:27
+#: templates/users/profile.html:11
+msgid "Enterprise name"
+msgstr "Название предприятия"
+
+#: templates/blogs/pages/membership/detail.html:28
+#: templates/users/profile.html:26
+msgid "Type of activity"
+msgstr "Вид деятельности"
+
+#: templates/blogs/pages/membership/detail.html:29
+msgid "Enterprise"
+msgstr "Предприятие"
+
+#: templates/blogs/pages/membership/list.html:11
+#: templates/blogs/pages/membership/list.html:19
+msgid "MEMBERS OF THE ASSOCIATION"
+msgstr "ЧЛЕНЫ АССОЦИАЦИИ"
+
+#: templates/blogs/pages/membership_procedure/membership_procedure.html:9
+msgid "The procedure for membership in the association"
+msgstr "Порядок членства в ассоциации"
+
+#: templates/blogs/pages/menu_companys/menu_companys.html:86
+msgid "Topilmadi!"
+msgstr ""
+
+#: templates/blogs/pages/news/list.html:11
+#: templates/blogs/pages/news/list.html:27
+msgid "All News"
+msgstr "Все новости"
+
+#: templates/blogs/pages/news/list.html:40
+msgid "More"
+msgstr "Подробнее"
+
+#: templates/blogs/pages/news/search_post_result.html:11
+msgid "Search results"
+msgstr "Результаты поиска"
+
+#: templates/blogs/pages/news/search_post_result.html:33
+msgid "No data found"
+msgstr "Данные не найдены"
+
+#: templates/blogs/pages/partners/partners.html:48
+#, fuzzy
+#| msgid "Address"
+msgid "Adress"
+msgstr "Адрес"
+
+#: templates/blogs/pages/partners/partners.html:51
+#, fuzzy
+#| msgid "phone"
+msgid "Phone"
+msgstr "Телефон"
+
+#: templates/blogs/pages/product/product_list.html:12
+#: templates/blogs/pages/product/product_list.html:22
+msgid "All products"
+msgstr "Все продукты"
+
+#: templates/blogs/pages/tender/list.html:11
+msgid "Announcements and Tenders"
+msgstr "Объявления и тендеры"
+
+#: templates/blogs/pages/tender/list.html:26
+msgid "From"
+msgstr "От"
+
+#: templates/blogs/pages/tender/list.html:30
+msgid "To"
+msgstr "До"
+
+#: templates/blogs/pages/tender/list.html:34
+#: templates/blogs/pages/tender/list.html:35
+msgid "Show"
+msgstr "Показать"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:14
+msgid "Main"
+msgstr "Главный"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:21
+msgid "Resume"
+msgstr "Резюме"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:43
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:30
+msgid "Full Name"
+msgstr "Полное имя"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:48
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:58
+msgid "Date of birth"
+msgstr "Дата рождения"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:53
+msgid "Nationality"
+msgstr "Национальность"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:61
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:69
+msgid "Marital status"
+msgstr "Семейное положение"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:79
+msgid "Email"
+msgstr "Электронная почта"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:84
+msgid "TIN number"
+msgstr "ИНН номер"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:89
+msgid "Degree"
+msgstr "Степень"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:94
+msgid "Speciality"
+msgstr "Специальность"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:108
+msgid "Additional information"
+msgstr "Дополнительная информация"
+
+#: templates/blogs/pages/vacancy/vacancy_list_view.html:116
+msgid "Upload Resume"
+msgstr "Загрузить Резюме"
+
+#: templates/blogs/pages/video/index.html:10
+msgid "All Videos"
+msgstr "Все видео"
+
+#: templates/blogs/pages/video/index.html:20
+msgid "Video"
+msgstr "Видео"
+
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:11
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:21
+msgid "VIRTUAL RECEPTION"
+msgstr "ВИРТУАЛЬНАЯ ПРИЕМНАЯ"
+
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:47
+msgid "Select a region"
+msgstr "Выберите регион"
+
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:64
+msgid "Gender"
+msgstr "Пол"
+
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:78
+msgid "Upload file"
+msgstr "Загрузить файл"
+
+#: templates/blogs/pages/virtual_reception/virtual_reception_form.html:94
+msgid "Allow my question to be published"
+msgstr "Соглашаюсь опубликовать мой вопрос"
+
+#: templates/users/login_2.html:19 templates/users/register_2.html:17
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: templates/users/login_2.html:26 templates/users/register_2.html:35
+msgid "Password"
+msgstr "Пароль"
+
+#: templates/users/profile.html:16
+msgid "Enterprise address"
+msgstr "Адрес предприятия"
+
+#: templates/users/profile.html:21
+msgid "Organizational legal form"
+msgstr "Организационно - правовая форма"
+
+#: templates/users/profile.html:31 templates/users/profile.html:36
+msgid "Date of registration"
+msgstr "Дата регистрации"
+
+#: templates/users/profile.html:42
+msgid "Authorized capital"
+msgstr "Уставный капитал"
+
+#: templates/users/profile.html:47
+msgid "Share of foreign capital"
+msgstr "Доля иностранного капитала"
+
+#: templates/users/profile.html:52
+msgid "Company founders"
+msgstr "Учредители компании"
+
+#: templates/users/profile.html:57
+msgid "Foreign founders"
+msgstr "Иностранные учредители"
+
+#: templates/users/profile.html:62
+msgid "Total area"
+msgstr "Общая площадь"
+
+#: templates/users/profile.html:67
+msgid "Production area"
+msgstr "Производственная зона"
+
+#: templates/users/profile.html:72
+msgid "Types of producing products"
+msgstr "Виды производимой продукции"
+
+#: templates/users/profile.html:77
+msgid "Main production indicators"
+msgstr "Основные производственные показатели"
+
+#: templates/users/profile.html:82
+msgid "Annual revenue"
+msgstr "Годовой доход"
+
+#: templates/users/profile.html:87
+msgid "Number of employees"
+msgstr "Количество сотрудников"
+
+#: templates/users/profile.html:92
+msgid "Export volume"
+msgstr "Объем экспорта"
+
+#: templates/users/profile.html:97
+msgid "Import volume"
+msgstr "Объем импорта"
+
+#: templates/users/profile.html:102
+msgid "Stir code"
+msgstr "СТИР код"
+
+#: templates/users/profile.html:107
+msgid "OKPO code"
+msgstr "ОКПО код"
+
+#: templates/users/profile.html:112
+msgid "Bank details"
+msgstr "Банковские реквизиты"
+
+#: templates/users/profile.html:117
+msgid "Web site"
+msgstr "Веб-сайт"
+
+#: templates/users/profile.html:127
+msgid "Financial indicators"
+msgstr "Финансовые показатели"
+
+#: templates/users/profile.html:132
+msgid "Head of organization"
+msgstr "Руководитель организации"
+
+#: venv/Lib/site-packages/ckeditor_uploader/forms.py:6
+msgid "Search files"
+msgstr "Поиск файлов"
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:5
+msgid "Select an image to embed"
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:27
+msgid "Browse for the image you want, then click 'Embed Image' to continue..."
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:29
+msgid ""
+"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
+"tab."
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:50
+msgid "Images in: "
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:62
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:80
+msgid "Embed Image"
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:146
+msgid "Play Slideshow"
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:147
+msgid "Pause Slideshow"
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:148
+msgid "&lsaquo; Previous Photo"
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:149
+msgid "Next Photo &rsaquo;"
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:150
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: venv/Lib/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:151
+msgid "&lsaquo; Prev"
+msgstr ""
+
+#: venv/Lib/site-packages/crispy_forms/tests/test_form_helper.py:129
+#: venv/Lib/site-packages/crispy_forms/tests/test_form_helper.py:139
+#: venv/Lib/site-packages/django/forms/fields.py:53
+msgid "This field is required."
+msgstr ""
+
+#: venv/Lib/site-packages/crispy_forms/tests/test_layout.py:390
+msgid "i18n text"
+msgstr ""
+
+#: venv/Lib/site-packages/crispy_forms/tests/test_layout.py:392
+msgid "i18n legend"
+msgstr ""
+
+#: venv/Lib/site-packages/crispy_forms/tests/test_layout_objects.py:134
+#: venv/Lib/site-packages/django/core/validators.py:31
+msgid "Enter a valid value."
+msgstr ""
+
+#: venv/Lib/site-packages/django/contrib/messages/apps.py:7
+msgid "Messages"
+msgstr "Сообщение"
+
+#: venv/Lib/site-packages/django/contrib/sitemaps/apps.py:7
+msgid "Site Maps"
+msgstr ""
+
+#: venv/Lib/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: venv/Lib/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr "Разделы"
+
+#: venv/Lib/site-packages/django/core/paginator.py:45
+msgid "That page number is not an integer"
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/paginator.py:47
+msgid "That page number is less than 1"
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/paginator.py:52
+msgid "That page contains no results"
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:102
+#: venv/Lib/site-packages/django/forms/fields.py:658
+msgid "Enter a valid URL."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:154
+msgid "Enter a valid integer."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:165
+msgid "Enter a valid email address."
+msgstr "Адрес предприятия"
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: venv/Lib/site-packages/django/core/validators.py:239
+msgid ""
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:246
+msgid ""
+"Enter a valid 'slug' consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:255
+#: venv/Lib/site-packages/django/core/validators.py:275
+msgid "Enter a valid IPv4 address."
+msgstr "Адрес предприятия"
+
+#: venv/Lib/site-packages/django/core/validators.py:260
+#: venv/Lib/site-packages/django/core/validators.py:276
+msgid "Enter a valid IPv6 address."
+msgstr "Адрес предприятия"
+
+#: venv/Lib/site-packages/django/core/validators.py:270
+#: venv/Lib/site-packages/django/core/validators.py:274
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:304
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:310
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:342
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:351
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:361
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/core/validators.py:376
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/core/validators.py:395
+#: venv/Lib/site-packages/django/forms/fields.py:290
+#: venv/Lib/site-packages/django/forms/fields.py:325
+msgid "Enter a number."
+msgstr "Номер телефона"
+
+#: venv/Lib/site-packages/django/core/validators.py:397
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/core/validators.py:402
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/core/validators.py:407
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/core/validators.py:469
+#, python-format
+msgid ""
+"File extension '%(extension)s' is not allowed. Allowed extensions are: "
+"'%(allowed_extensions)s'."
+msgstr ""
+
+#: venv/Lib/site-packages/django/core/validators.py:521
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/base.py:1162
+#: venv/Lib/site-packages/django/forms/models.py:756
+msgid "and"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/base.py:1164
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:104
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:105
+msgid "This field cannot be null."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:106
+msgid "This field cannot be blank."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:107
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:111
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:128
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:901
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1768
+msgid "Integer"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:905
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1766
+#, python-format
+msgid "'%(value)s' value must be an integer."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:980
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1846
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:992
+#, python-format
+msgid "'%(value)s' value must be either True or False."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:993
+#, python-format
+msgid "'%(value)s' value must be either True, False, or None."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:995
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1036
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1100
+msgid "Comma-separated integers"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1149
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1151
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1294
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1154
+msgid "Date (without time)"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1292
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1296
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1300
+msgid "Date (with time)"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1448
+#, python-format
+msgid "'%(value)s' value must be a decimal number."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1450
+msgid "Decimal number"
+msgstr "Номер телефона"
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1589
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in [DD] [HH:[MM:]]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1592
+msgid "Duration"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1642
+msgid "Email address"
+msgstr "Адрес предприятия"
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1665
+msgid "File path"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1731
+#, python-format
+msgid "'%(value)s' value must be a float."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1733
+msgid "Floating point number"
+msgstr "Контактный телефон"
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1862
+msgid "IPv4 address"
+msgstr "Адрес"
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1893
+msgid "IP address"
+msgstr "Адрес"
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1973
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1974
+#, python-format
+msgid "'%(value)s' value must be either None, True or False."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:1976
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2011
+msgid "Positive integer"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2024
+msgid "Positive small integer"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2038
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2070
+msgid "Small integer"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2077
+msgid "Text"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2105
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2107
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2110
+msgid "Time"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2236
+msgid "URL"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2258
+msgid "Raw binary data"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2308
+#, python-format
+msgid "'%(value)s' is not a valid UUID."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/__init__.py:2310
+msgid "Universally unique identifier"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/files.py:221
+msgid "File"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/related.py:778
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/related.py:780
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/related.py:1007
+msgid "One-to-one relationship"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/related.py:1057
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/related.py:1058
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: venv/Lib/site-packages/django/db/models/fields/related.py:1100
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: venv/Lib/site-packages/django/forms/boundfield.py:146
+msgid ":?.!"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:245
+msgid "Enter a whole number."
+msgstr "Контактный телефон"
+
+#: venv/Lib/site-packages/django/forms/fields.py:396
+#: venv/Lib/site-packages/django/forms/fields.py:1126
+msgid "Enter a valid date."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:420
+#: venv/Lib/site-packages/django/forms/fields.py:1127
+msgid "Enter a valid time."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:442
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:471
+msgid "Enter a valid duration."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:472
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:532
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:533
+msgid "No file was submitted."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:534
+msgid "The submitted file is empty."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:536
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:539
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:600
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:762
+#: venv/Lib/site-packages/django/forms/fields.py:852
+#: venv/Lib/site-packages/django/forms/models.py:1270
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:853
+#: venv/Lib/site-packages/django/forms/fields.py:968
+#: venv/Lib/site-packages/django/forms/models.py:1269
+msgid "Enter a list of values."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:969
+msgid "Enter a complete value."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/fields.py:1185
+msgid "Enter a valid UUID."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/Lib/site-packages/django/forms/forms.py:86
+msgid ":"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/forms.py:212
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/formsets.py:91
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/formsets.py:338
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/forms/formsets.py:345
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/forms/formsets.py:371
+#: venv/Lib/site-packages/django/forms/formsets.py:373
+msgid "Order"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/formsets.py:375
+msgid "Delete"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/models.py:751
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/models.py:755
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/models.py:761
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/models.py:770
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/models.py:1091
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/models.py:1158
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/models.py:1272
+#, python-format
+msgid "\"%(pk)s\" is not a valid value."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/utils.py:162
+#, python-format
+msgid ""
+"%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/widgets.py:395
+msgid "Clear"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/widgets.py:396
+msgid "Currently"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/widgets.py:397
+msgid "Change"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/widgets.py:711
+msgid "Unknown"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/widgets.py:712
+msgid "Yes"
+msgstr ""
+
+#: venv/Lib/site-packages/django/forms/widgets.py:713
+msgid "No"
+msgstr ""
+
+#: venv/Lib/site-packages/django/template/defaultfilters.py:788
+msgid "yes,no,maybe"
+msgstr ""
+
+#: venv/Lib/site-packages/django/template/defaultfilters.py:817
+#: venv/Lib/site-packages/django/template/defaultfilters.py:834
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/template/defaultfilters.py:836
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: venv/Lib/site-packages/django/template/defaultfilters.py:838
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: venv/Lib/site-packages/django/template/defaultfilters.py:840
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: venv/Lib/site-packages/django/template/defaultfilters.py:842
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: venv/Lib/site-packages/django/template/defaultfilters.py:844
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dateformat.py:62
+msgid "p.m."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dateformat.py:63
+msgid "a.m."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dateformat.py:68
+msgid "PM"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dateformat.py:69
+msgid "AM"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dateformat.py:150
+msgid "midnight"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dateformat.py:152
+msgid "noon"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:14
+msgid "January"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:14
+msgid "February"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:14
+msgid "March"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:14
+msgid "April"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:14
+msgid "May"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:14
+msgid "June"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:15
+msgid "July"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:15
+msgid "August"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:15
+msgid "September"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:15
+msgid "October"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:15
+msgid "November"
+msgstr "Номер телефона"
+
+#: venv/Lib/site-packages/django/utils/dates.py:16
+msgid "December"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:19
+msgid "jan"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:19
+msgid "feb"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:19
+msgid "mar"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:19
+msgid "apr"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:19
+msgid "may"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:19
+msgid "jun"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:20
+msgid "jul"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:20
+msgid "aug"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:20
+msgid "sep"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:20
+msgid "oct"
+msgstr "Контакты"
+
+#: venv/Lib/site-packages/django/utils/dates.py:20
+msgid "nov"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:20
+msgid "dec"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:23
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:24
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:25
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:26
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:27
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:28
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:29
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:30
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:33
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:37
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:38
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:39
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:40
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:41
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:42
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:43
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:44
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/dates.py:47
+msgctxt "alt. month"
+msgid "November"
+msgstr "Номер телефона"
+
+#: venv/Lib/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/text.py:67
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/text.py:233
+msgid "or"
+msgstr "Подробнее"
+
+#. Translators: This string is used as a separator between list elements
+#: venv/Lib/site-packages/django/utils/text.py:252
+#: venv/Lib/site-packages/django/utils/timesince.py:83
+msgid ", "
+msgstr ""
+
+#: venv/Lib/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: venv/Lib/site-packages/django/utils/timesince.py:72
+msgid "0 minutes"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/csrf.py:110
+msgid "Forbidden"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/csrf.py:111
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/csrf.py:115
+msgid ""
+"You are seeing this message because this HTTPS site requires a 'Referer "
+"header' to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/csrf.py:120
+msgid ""
+"If you have configured your browser to disable 'Referer' headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for 'same-"
+"origin' requests."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/csrf.py:124
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the 'Referrer-Policy: no-referrer' header, please remove them. The "
+"CSRF protection requires the 'Referer' header to do strict referer checking. "
+"If you're concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" ...> for links to third-party sites."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/csrf.py:132
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/csrf.py:137
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for 'same-origin' requests."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/csrf.py:142
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/dates.py:41
+msgid "No year specified"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/dates.py:61
+#: venv/Lib/site-packages/django/views/generic/dates.py:111
+#: venv/Lib/site-packages/django/views/generic/dates.py:208
+msgid "Date out of range"
+msgstr "Дата рождения"
+
+#: venv/Lib/site-packages/django/views/generic/dates.py:90
+msgid "No month specified"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/dates.py:142
+msgid "No day specified"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/dates.py:188
+msgid "No week specified"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/dates.py:338
+#: venv/Lib/site-packages/django/views/generic/dates.py:367
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/dates.py:589
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/dates.py:623
+#, python-format
+msgid "Invalid date string '%(datestr)s' given format '%(format)s'"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/detail.py:54
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/list.py:67
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/list.py:72
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/generic/list.py:154
+#, python-format
+msgid "Empty list and '%(class_name)s.allow_empty' is False."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/static.py:40
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/static.py:42
+#, python-format
+msgid "\"%(path)s\" does not exist"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/static.py:80
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:6
+msgid "Django: the Web framework for perfectionists with deadlines."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:345
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:367
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:368
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:383
+msgid "Django Documentation"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:384
+msgid "Topics, references, &amp; how-to's"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:395
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:396
+msgid "Get started with Django"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:407
+msgid "Django Community"
+msgstr ""
+
+#: venv/Lib/site-packages/django/views/templates/default_urlconf.html:408
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/Lib/site-packages/django_ckeditor_5/views.py:45
+msgid "Page not found."
+msgstr ""
+
+#: venv/Lib/site-packages/django_ckeditor_5/widgets.py:34
+msgid "Check the correct settings.CKEDITOR_5_CONFIGS "
+msgstr ""
+
+#: venv/Lib/site-packages/mapbox_location_field/forms.py:20
+msgid "Invalid input for a Location instance"
+msgstr ""
+
+#: venv/Lib/site-packages/mapbox_location_field/forms.py:29
+msgid "Invalid first letter for parsing location."
+msgstr ""
+
+#: venv/Lib/site-packages/mapbox_location_field/forms.py:33
+msgid ""
+"Invalid input for a Location instance. Latitude must be convertible to float "
+msgstr ""
+
+#: venv/Lib/site-packages/mapbox_location_field/forms.py:37
+msgid ""
+"Invalid input for a Location instance. Longitude must be convertible to "
+"float "
+msgstr ""
+
+#: venv/Lib/site-packages/mapbox_location_field/models.py:11
+msgid "Location field (latitude and longitude)."
+msgstr ""
+
+#: venv/Lib/site-packages/mapbox_location_field/models.py:71
+msgid "Address field which automatically fill with address from LocationField."
+msgstr ""
+
+#: venv/Lib/site-packages/mapbox_location_field/spatial/models.py:10
+msgid "Location field for spatial databases, stores Points."
+msgstr ""
+
+#~ msgid "About the organization"
+#~ msgstr "Об организации"
+
+#~ msgid "Management"
+#~ msgstr "Руководство"
+
+#~ msgid "Reception time:"
+#~ msgstr "Время приема:"
+
+#~ msgid "Membership Benefits"
+#~ msgstr "Преимущества членства"
+
+#~ msgid "Reasons why you should be a member of the association"
+#~ msgstr "Причины, по которым вы должны быть членом ассоциации"
+
+#~ msgid "Vacancies"
+#~ msgstr "Вакансии"
+
+#~ msgid ""
+#~ "Association of leather and footwear and fur enterprises of Uzbekistan "
+#~ "«Uzcharmsanoat»"
+#~ msgstr ""
+#~ "Ассоциация кожевенно-обувных и меховых предприятий Узбекистана "
+#~ "«Узчармсаноат»"
+
+#~ msgid "Membership in the association"
+#~ msgstr "Членство в ассоциации"
+
+#~ msgid "News"
+#~ msgstr "Новости"
+
+#~ msgid "About Asosation"
+#~ msgstr "Об организации"
+
+#~ msgid "membership in the association"
+#~ msgstr "Членство в ассоциации"
+
+#~ msgid "Photo gallery"
+#~ msgstr "Галерея"
+
+#~ msgid "News and Tenders"
+#~ msgstr "Объявления и тендеры"
+
+#~ msgid "ASSOCIATION UZCHARMSANOAT"
+#~ msgstr "АССОЦИАЦИЯ УЗЧАРМСАНОАТ"
+
+#~ msgid "Working hours 09:00 - 18:00 <br> Lunch 13:00 - 14:00"
+#~ msgstr "Рабочее время 09:00 - 18:00 <br> Обед 13:00 - 14:00"
+
+#~ msgid "Screensaver"
+#~ msgstr "Экранная заставка"
+
+#~ msgid "All"
+#~ msgstr "Все"
+
+#~ msgid "Archive"
+#~ msgstr "Архив"
+
+#, fuzzy
+#~ msgid "Organizations"
+#~ msgstr "Организации"
+
+#~ msgid "UZCHARMSANOAT"
+#~ msgstr "АССОЦИАЦИЯ УЗЧАРМСАНОАТ"
+
+#~ msgid "Upload your file"
+#~ msgstr "Загрузите свой файл"
+
+#~ msgid "Login to access our resources"
+#~ msgstr "Войдите, чтобы получить доступ к ресурсам"
+
+#~ msgid "Register to access all our resources"
+#~ msgstr "Зарегистрируйтесь, чтобы получить доступ к ресурсам"
+
+#, fuzzy
+#~ msgid "site/"
+#~ msgstr "Веб-сайт"
+
+#~ msgid "Share"
+#~ msgstr "Поделиться"

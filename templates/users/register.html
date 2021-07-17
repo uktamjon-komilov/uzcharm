@@ -1,0 +1,52 @@
+{% extends "users/base.html" %}
+
+{% block main %}
+<div class="card my-5">
+    <div class="card-body">
+    <h4 class="card-title mb-4">Registration</h4>
+    {% include "partials/_messages.html" %}
+    <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label>Fullname</label>
+            <input type="text" class="form-control" name="fullname">
+        </div>
+        <div class="form-group mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email">
+        </div>
+        <div class="form-group mb-3">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username">
+        </div>
+        <div class="form-group mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password1">
+        </div>
+        <div class="form-group mb-3">
+            <label>Password (Confirmation)</label>
+            <input type="password" class="form-control" name="password2">
+        </div>
+        <div class="form-group mb-3">
+            <label>Phone</label>
+            <input type="text" class="form-control" name="phone">
+        </div>
+        <div class="form-group mb-3">
+            <label>Organization Passport</label>
+            <textarea class="form-control" rows="3" name="organization-details"></textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label>Financial Projections</label>
+            <textarea class="form-control" rows="3" name="financial-projections"></textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label>
+                Organization Charter<br><input type="file" name="organization-charter" class="form-control-file">
+            </label>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Register">
+        <a href="{% url 'login' %}" class="btn btn-secondary">Login</a>
+    </form>
+    </div>
+  </div>
+{% endblock %}

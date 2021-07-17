@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+<style>
+    .card-wrap {
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .page-title-head h1 {
+        font-size: 23px;
+        text-transform: capitalize;
+    }
+
+    .card-wrap .card-body p, li {
+        text-transform: capitalize;
+    }
+</style>
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-title-head hgroup text-center mb-4">
+                    <h1>Uyushmaga aʼzo boʻlish tartibi</h1>
+                </div>
+                <div class="card border-0 card-wrap">
+                    <div class="card-body">
+                        {% for join in joins %}
+                            {{ join.content|safe }}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

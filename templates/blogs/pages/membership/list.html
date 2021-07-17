@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block content %}
+
+    <section class="all__news" style="background: url('{% static 'assets/images/bannerimg.png' %}')">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-12">
+                    <div class="heading_news-all">
+                        <h1>{% trans 'MEMBERS OF THE ASSOCIATION' %}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5 pt-5">
+        <h1 class="title__text_mem">{% trans 'MEMBERS OF THE ASSOCIATION' %}</h1>
+        <div class="border__membership mb-5 mx-auto"></div>
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <span class="date__membership">{% trans 'Post date:' %} 03 December 2020</span>
+
+                <span class="float-right pdf__version">
+                <a href="" class="text-decoration-none">
+                <i class="far fa-file-pdf text-danger mr-1"></i>{% trans 'PDF version' %}
+              </a>
+        </span>
+
+            </div>
+
+            {#TARJIMA BUYAM#}
+
+
+            <div class="col-lg-12 mt-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <h2 class="text__membership">
+                            <a href="">Uyushmaga azolikning afzalliklari. <i class="fas fa-arrow-right"></i></a>
+                        </h2>
+                        <h2 class="text__membership">
+                            <a href="">A'zo bo'lish tartibi. <i class="fas fa-arrow-right"></i></a>
+                        </h2>
+                        <h2 class="text__membership">
+                            <a href="">Uyushmaga onlayn ariza yuborish. <i class="fas fa-arrow-right"></i></a>
+                        </h2>
+                        <h2 class="text__membership">
+                            <a href="">Uyishma tartibidagi a'zo korxonalar ro'yxati <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
