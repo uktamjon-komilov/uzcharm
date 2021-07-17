@@ -1,5 +1,6 @@
 {% load i18n static %}
 {% load reverse_lang %}
+{% load current_lang %}
 
 <!DOCTYPE html>
 <html lang="en" class="html">
@@ -186,20 +187,20 @@
                             {% for menu in menus %}
                                 <li class="nav-item hover__dropp">
                                     <a class="nav-link" {% if menu.link %}
-                                       href="../{{ menu.link }}" {% else %} {% endif %}>{{ menu.name }}</a>
+                                       href="https://{{ request.get_host }}/{% current_lang request %}/{{ menu.link }}" {% else %} {% endif %}>{{ menu.name }}</a>
                                     {% if menu.children.all %}
                                         <ul class="drop__item__menu">
                                             {% for menu in menu.children.all %}
                                                 <li class="li__hover__bg second__hover">
-                                                    <a href="../{{ menu.link }}">{{ menu.name }}</a>
+                                                    <a href="https://{{ request.get_host }}/{% current_lang request %}/{{ menu.link }}">{{ menu.name }}</a>
                                                     <ul class="nav__menu_open">
                                                         {% for menu in menu.children.all %}
                                                             <li class="listtsttsts">
-                                                                <a href="../{{ menu.link }}">{{ menu.name }}</a>
+                                                                <a href="https://{{ request.get_host }}/{% current_lang request %}/{{ menu.link }}">{{ menu.name }}</a>
                                                                 <ul class="third__hoverr">
                                                                     {% for menu in menu.children.all %}
                                                                         <li>
-                                                                            <a href="../{{ menu.link }}">{{ menu.name }}</a>
+                                                                            <a href="https://{{ request.get_host }}/{% current_lang request %}/{{ menu.link }}">{{ menu.name }}</a>
                                                                         </li>
                                                                     {% endfor %}
                                                                 </ul>

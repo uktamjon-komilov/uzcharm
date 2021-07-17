@@ -4,15 +4,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
-from users import views as user_view
-import users
-
+from blogs.views import index_page
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('blogs.urls')),
     path('user/', include('users.urls')),
 )
+
+urlpatterns.append(path("", index_page))
 
 urlpatterns += [
     path('rosetta/', include('rosetta.urls')),
