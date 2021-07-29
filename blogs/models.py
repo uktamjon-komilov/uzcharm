@@ -820,8 +820,12 @@ class EventsAdmin(parler_models.TranslatableModel):
     image = models.ImageField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _("Events Admin")
+        verbose_name_plural = _("Events Admins")
 
 
 class InvestmentPotentialAdmin(parler_models.TranslatableModel):
@@ -832,12 +836,12 @@ class InvestmentPotentialAdmin(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Investment potential')
+    class Meta:
+        verbose_name = _('Investment potential')
 
 
 class ExportPotentialAdmin(parler_models.TranslatableModel):
@@ -848,12 +852,12 @@ class ExportPotentialAdmin(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Export Potential')
+    class Meta:
+        verbose_name = _('Export Potential')
 
 
 class ExportImplementationAdmin(parler_models.TranslatableModel):
@@ -864,12 +868,12 @@ class ExportImplementationAdmin(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Export Implementation')
+    class Meta:
+        verbose_name = _('Export Implementation')
 
 
 class ExportLawAdmin(parler_models.TranslatableModel):
@@ -880,12 +884,12 @@ class ExportLawAdmin(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Export Law')
+    class Meta:
+        verbose_name = _('Export Law')
 
 
 class MarketEntryStrategies(parler_models.TranslatableModel):
@@ -896,12 +900,12 @@ class MarketEntryStrategies(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Market entry strategies')
+    class Meta:
+        verbose_name = _('Market entry strategies')
 
 
 class PresentationsAdmin(parler_models.TranslatableModel):
@@ -970,12 +974,12 @@ class InvestorsAdmin(parler_models.TranslatableModel):
     image4 = models.ImageField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Investors')
+    class Meta:
+        verbose_name = _('Investors')
 
 
 class ExportersAdmin(parler_models.TranslatableModel):

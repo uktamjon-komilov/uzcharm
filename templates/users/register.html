@@ -1,52 +1,110 @@
 {% extends "users/base.html" %}
 
 {% block main %}
-<div class="card my-5">
-    <div class="card-body">
-    <h4 class="card-title mb-4">Registration</h4>
-    {% include "partials/_messages.html" %}
-    <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="form-group mb-3">
-            <label>Fullname</label>
-            <input type="text" class="form-control" name="fullname">
+<div class="body_c">
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 m-auto">
+            <div class="card mb-5 bg-transparent border-0">
+                <div class="card-body">
+                <h4 class="card-title mb-4">Registration</h4>
+                {% include "partials/_messages.html" %}
+                <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="row">
+                        <div class="col-md-6">
+                           <div class="form-group mb-3">
+                        <label>Fullname</label>
+                        <input type="text" class="form-control" name="fullname">
+                        </div>  
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label>Email</label>
+                                <input type="email" class="form-control" name="email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label>Username</label>
+                                <input type="text" class="form-control" name="username">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label>Password</label>
+                                <input type="password" class="form-control" name="password1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label>Password (Confirmation)</label>
+                                <input type="password" class="form-control" name="password2">
+                            </div>
+                        </div>
+                        <div class="col-md-6"> <div class="form-group mb-3">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" name="phone">
+                        </div></div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label>Organization Passport</label>
+                                <textarea class="form-control" rows="3" name="organization-details"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6"> <div class="form-group mb-3">
+                            <label>Financial Projections</label>
+                            <textarea class="form-control" rows="3" name="financial-projections"></textarea>
+                        </div></div>
+                    </div>
+                
+                    <div class="form-group mb-3">
+                        <label>
+                            Organization Charter<br><input type="file" name="organization-charter" class="form-control-file">
+                        </label>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Register">
+                    <a href="{% url 'login' %}" class="reg_a">Login</a>
+                </form>
+                </div>
+              </div>
         </div>
-        <div class="form-group mb-3">
-            <label>Email</label>
-            <input type="email" class="form-control" name="email">
-        </div>
-        <div class="form-group mb-3">
-            <label>Username</label>
-            <input type="text" class="form-control" name="username">
-        </div>
-        <div class="form-group mb-3">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password1">
-        </div>
-        <div class="form-group mb-3">
-            <label>Password (Confirmation)</label>
-            <input type="password" class="form-control" name="password2">
-        </div>
-        <div class="form-group mb-3">
-            <label>Phone</label>
-            <input type="text" class="form-control" name="phone">
-        </div>
-        <div class="form-group mb-3">
-            <label>Organization Passport</label>
-            <textarea class="form-control" rows="3" name="organization-details"></textarea>
-        </div>
-        <div class="form-group mb-3">
-            <label>Financial Projections</label>
-            <textarea class="form-control" rows="3" name="financial-projections"></textarea>
-        </div>
-        <div class="form-group mb-3">
-            <label>
-                Organization Charter<br><input type="file" name="organization-charter" class="form-control-file">
-            </label>
-        </div>
-        <input type="submit" class="btn btn-primary" value="Register">
-        <a href="{% url 'login' %}" class="btn btn-secondary">Login</a>
-    </form>
     </div>
-  </div>
+</div>
+</div>
 {% endblock %}
+
+{% block css %}
+<style>
+     .card-title{
+        color: #fff;
+    font-weight: 700;
+    font-style: italic;
+    }
+    .form-group label{
+        color: #fff;
+    margin-bottom: 10px;
+    font-style: italic;
+    }
+    .form-group input{
+        padding: 7px;
+    }
+    .reg_a{
+        color: #fff;
+        font-style: italic;
+        text-decoration: underline;
+    float: right;
+        font-size: 18px;
+    margin-top: 5px;
+    }
+    .reg_a:hover{
+        color: #fff;
+    }
+     .body_c{
+         height: 100%;
+        background: linear-gradient(119.83deg, #1D518D 1.12%, #0C95F9 100%);
+    }
+</style>
+{% endblock css %}

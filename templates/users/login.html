@@ -1,27 +1,78 @@
 {% extends "users/base.html" %}
 
 {% block main %}
-<div class="row">
-    <div class="col-lg-6 col-md-6 col-12 m-auto">
-        <div class="card my-5">
-            <div class="card-body">
-            <h4 class="card-title mb-4">Login</h4>
-            {% include "partials/_messages.html" %}
-            <form action="{% url 'login' %}" method="post">
-                {% csrf_token %}
-                <div class="form-group mb-3">
-                    <label>Username</label>
-                    <input type="text" class="form-control" name="username">
+<div class="body_c">
+
+    <div class="h__100">
+        <div class="col-lg-4 col-md-6 col-12 m-auto">
+            <div class="card color_card border-0">
+                <div class="card-body">
+                <h4 class="card-title mb-4">Login</h4>
+                {% include "partials/_messages.html" %}
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                    <input type="submit" class="btn btn-primary btn__se" value="Login">
+                
+                
+                    <a href="{% url 'register' %}" class="float-right reg_a">Register</a>
+                </form>
                 </div>
-                <div class="form-group mb-3">
-                    <label>Password</label>
-                    <input type="password" class="form-control" name="password">
-                </div>
-                <input type="submit" class="btn btn-primary" value="Login">
-                <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
-            </form>
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
+
+{% block css %}
+<style>
+    .body_c{
+        background: linear-gradient(119.83deg, #1D518D 1.12%, #0C95F9 100%);
+    }
+    .h__100{
+        height: 100vh;
+        align-items: center;
+        display: flex;
+    }
+    .color_card{
+    background-color: transparent
+    }
+    .reg_a{
+        color: #fff;
+        font-style: italic;
+        text-decoration: underline;
+    float: right;
+        font-size: 18px;
+    margin-top: 5px;
+    }
+    .reg_a:hover{
+        color: #fff;
+    }
+    .card-title{
+        color: #fff;
+    font-weight: 700;
+    font-style: italic;
+    }
+    .form-group label{
+        color: #fff;
+    margin-bottom: 10px;
+    font-style: italic;
+    }
+    .form-group input{
+        padding: 7px;
+    }
+    .btn__se{
+        border: 1px solid #fff;
+    }
+    .btn__se:hover{
+        border: 1px solid #fff;
+    }
+</style>
+{% endblock css %}
