@@ -49,6 +49,10 @@ class MenuAdmin(parler_admin.TranslatableAdmin, mptt_admin.DraggableMPTTAdmin):
 class MenuOverlay(TranslatableAdmin):
     pass
 
+@admin.register(models.Banner)
+class Banner(TranslatableAdmin):
+    pass
+
 
 @admin.register(models.PressReleasesAdmin)
 class PressRealeses(TranslatableAdmin):

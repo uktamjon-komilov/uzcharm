@@ -1,30 +1,44 @@
 {% extends "base.html" %}
 {% load i18n static %}
 
+{% block js %}
+    <script>
+        $('.banners').owlCarousel({
+            loop: true,
+            margin: 10,
+            dots: false,
+            nav: true,
+            animateOut: "fadeOut",
+            lazyLoad: !0,
+            autoplay: !0,
+            autoplayTimeout: 6e3,
+            autoplayHoverPause: !0,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+    </script>
+{% endblock js %}
 {% block content %}
-    <section class="banner"
-             style="background: url('{{ menu_settings.home_page_gif.url }}') center center/cover no-repeat;">
-        <div class="banner__bg">
-            <div class="container dasas">
-                <div class="row position-relative">
-                    <div class="col-md-7">
-                        <div class="text-banner typewriter">
-                            <h1>{{ menu_settings.home_page_text }}</h1>
-                            <a href="{% url 'blogs:about' %}" class="banner__btn_href mt-4 text-decoration-none">
-                                {% trans 'Learn more' %}
-                                <i class="far fa-long-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <a href="#news" class="box">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
+    <div class="banner">
+        <div class="banners owl-carousel owl-theme">
+            {% for banner in banners %}
+            <div class="item">
+                <img src="{{ banner.banner_carousel.url }}" alt="">
+                <div class="text-teaser"><span>{{ banner.text }}</span></div>
             </div>
+            {% endfor %}
         </div>
-    </Section>
+    </div>
 
     <!-- ОБ АССОЦИАЦИИ -->
     <section class="dropdowns-group">
@@ -213,7 +227,7 @@
     </section>
 
     <section class="statistics"
-             style="background: url('{% static 'assets/images/28f50ec4b7fcb2d89218f63a0aa5de67.png' %}'); background-attachment: fixed;">
+             style="background: url('{{ menu_settings.site_background.url }}'); background-attachment: fixed;">
         <div class="container">
 
             <div class="col-md-12 mb-5 text-center" data-aos="fade-up">
@@ -237,18 +251,18 @@
                         {% endfor %}
 
 
-                    {#//// statistics a href //////#}
-                    <div class="col-md-12">
-                        <a href="{% url 'blogs:statistic_list' %}" data-aos="fade-up"
-                           class="faqs-button mx-auto text-decoration-none text-white">
-                            {% trans 'more...' %}
-                            <i class="far fa-long-arrow-right"></i>
-                        </a>
+                        {#//// statistics a href //////#}
+                        <div class="col-md-12">
+                            <a href="{% url 'blogs:statistic_list' %}" data-aos="fade-up"
+                               class="faqs-button mx-auto text-decoration-none text-white">
+                                {% trans 'more...' %}
+                                <i class="far fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                        {#//// statistics //////#}
                     </div>
-                    {#//// statistics //////#}
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -292,7 +306,7 @@
 
     <section class="top-expo">
         <div class="expo"
-             style="background-image: url('{% static 'assets/images/img-gallery/parda.png' %}');background-attachment: fixed">
+             style="background-image: url('{{ menu_settings.site_background2.url }}');background-attachment: fixed">
             <div class="container">
                 <div class="row">
                     {% for item in expolinks %}
@@ -367,7 +381,8 @@
                                                           stroke-linejoin="round" stroke-opacity="1" fill="#d5d5d5"
                                                           original="#d5d5d5"
                                                           data-city="{{ regions.TashkentRegion }}"
-                                                          data-phone="{{ regions.TashkentRegionNumber }}" id="jqvmap1_item4"
+                                                          data-phone="{{ regions.TashkentRegionNumber }}"
+                                                          id="jqvmap1_item4"
                                                           class="jvectormap-region" fill-opacity="1"></path>
 
                                                     <path d="M403.88,196.894l-0.198-0.935l-0.737-1.474l-0.255-0.454l-0.737-0.822 l-1.304-1.106l-4.11-5.046l-2.381-2.296l-1.474-0.907l-0.935-0.368l-0.17-0.198l-0.085-0.085l-0.198-0.17l-0.085-0.283 l-0.085-0.454v-0.652l0.368-1.559v-0.454l-3.6,2.466l0.283,6.973l1.191,0.283l0.652,3.685l-1.105,0.822l-2.013-0.822l-1.389,1.361 l-4.11-2.381v0.283v4.11l-0.113,0.368l-0.17,0.198h-0.085l-0.368-0.085l-1.106-0.567l-0.907-0.17l-0.283-0.113h-0.198 l-0.255,0.113l-0.482,0.085l-0.17,0.085l-0.198,0.085l-0.255,0.368l-0.085,0.283l-0.198,0.737v0.085v0.198l0.085,0.085 l0.935,1.106l0.369,0.539l0.085,0.368l0.085,0.198v0.17L378,200.835l-0.198,0.255l-0.085,0.198l-0.369,0.17 c0,0.113-0.085,0.113-0.17,0.113l-1.559,0.624l-0.454,0.283l-0.198,0.368l-0.085,0.368l-0.085,0.454l-0.198,0.652l-0.652,1.191 l-0.085,0.085l-0.085,0.539l0.085,0.737l0.085,0.283l0.113,0.283l0.17,0.283l0.567,0.454l0.368,0.17l0.822,0.283l0.992,0.17h2.296 l1.276-0.17l4.961-1.843l0.198-0.085h0.17l0.567,0.085l0.992,0.454l0.454,0.283l0.113,0.198l0.255,0.454v0.17v0.283l-0.085,0.17 l-1.361,2.409l-0.198,0.34v0.198l-0.085,0.454v0.085l0.085,0.935l0.085,0.368l0.113,0.085l0.255,0.17l0.283,0.198l1.02,0.085 h1.276l0.454,0.085l0.283,0.198l0.085,0.085l0.368,0.539l0.198,0.283v0.283l-0.113,0.085v0.198l-0.085,0.085l-0.17,0.085 l-0.283,0.283l-2.013,0.992l-0.368,0.368l-0.283,0.283l-0.198,0.283v0.17v0.198l0.113,0.085v0.17l0.17,0.368l0.085,0.113 l0.368,0.255l0.482,0.283l0.255,0.085l0.567,0.113h0.539l0.567-0.113l0.255-0.085l0.567-0.283l0.454-0.454l0.454-0.907 l0.652-1.757l0.085-0.17l0.085-0.198l0.198-0.17h0.085h0.17h0.198l0.17,0.085l0.198,0.454l1.276,0.198l1.191,2.92l1.105,0.567 l1.02-0.822l-3.969-6.151l0.567-0.822l1.105,1.559l1.276-1.304l2.948,0.113l-0.283-2.948l-3.402,0.454l-4.394,1.106 c-0.964-0.624,0.454-0.822,0.595-1.304c0.68-2.069,8.504-3.033,10.035-3.203v-0.368l-0.255-0.822l-0.113-0.454l0.113-0.992 l0.085-0.652l0.624-2.013l0.113-0.652l0.17-2.098L403.88,196.894z"
@@ -532,3 +547,27 @@
         </div>
     </section>
 {% endblock %}
+
+
+{#    <section class="banner" >#}
+    {#        <div class="banner__bg">#}
+    {#            <div class="container dasas">#}
+    {#                <div class="row position-relative">#}
+    {#                    <div class="col-md-7">#}
+    {#                        <div class="text-banner typewriter">#}
+    {#                            <h1>{{ menu_settings.home_page_text }}</h1>#}
+    {#                            <a href="{% url 'blogs:about' %}" class="banner__btn_href mt-4 text-decoration-none">#}
+    {#                                {% trans 'Learn more' %}#}
+    {#                                <i class="far fa-long-arrow-right"></i>#}
+    {#                            </a>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                    <a href="#news" class="box">#}
+    {#                        <span></span>#}
+    {#                        <span></span>#}
+    {#                        <span></span>#}
+    {#                    </a>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </Section>#}
