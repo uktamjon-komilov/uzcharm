@@ -100,27 +100,24 @@
             <div class="row">
                 <div class="col-md-12" id='news' data-aos="fade-up">
                     <h1>{% trans 'All news' %}</h1>
-                    <div class="mx-auto border_bot"></div>
+                    <div class="mx-auto border_bot mb-5"></div>
                 </div>
 
                 <div class="new-carousel owl-carousel owl-theme col-md-12">
                     {% for link in news %}
-                        <div class="item rescol-news" data-aos-duration="1000">
-                            <a href="{{ link.get_absolute_url }}" class="text-decoration-none">
-                                <div class="card responsive-news overflow-hidden">
-                                    <img data-aos="fade-down-right" data-aos-duration="2000" src="{{ link.image.url }}"
-                                         alt="">
-                                    <p class="card-img-bottom title-card">{{ link.created|date:"d M" }}</p>
-                                    <div class="card-body">
-                                        <h2>{{ link.title }}</h2>
-                                        <h6>{{ link.short_description|safe }}</h6>
-                                    </div>
+                        <a href="{{ link.get_absolute_url }}" class="text-decoration-none">
+                            <div class="news-home__item">
+                                <div class="news-home__image">
+                                    <img src="{{ link.image.url }}" alt="">
                                 </div>
-                            </a>
-                        </div>
+                                <div class="news-home__teaser">
+                                    <p>{{ link.short_description|safe }}</p>
+                                    <span class="news-home__date">{% trans 'Нашр этилган' %} {{ link.created|date:"d M" }}</span></div>
+                            </div>
+                        </a>
                     {% endfor %}
                 </div>
-                <div class="batafsil-btn mx-auto"
+                <div class="batafsil-btn mx-auto mt-5"
                      data-aos="fade-up">
                     <a href="{% url 'blogs:news_list' %}">{% trans 'All news' %}
                         <i class="far fa-long-arrow-right"></i></a>
@@ -227,7 +224,8 @@
     </section>
 
     <section class="statistics"
-             style="background: url('{{ menu_settings.site_background.url }}'); background-attachment: fixed;">
+             style="background: url('{{ menu_settings.site_background.url }}'); background-attachment: fixed;background-repeat: no-repeat;
+             background-size: cover;">
         <div class="container">
 
             <div class="col-md-12 mb-5 text-center" data-aos="fade-up">
@@ -547,27 +545,3 @@
         </div>
     </section>
 {% endblock %}
-
-
-{#    <section class="banner" >#}
-    {#        <div class="banner__bg">#}
-    {#            <div class="container dasas">#}
-    {#                <div class="row position-relative">#}
-    {#                    <div class="col-md-7">#}
-    {#                        <div class="text-banner typewriter">#}
-    {#                            <h1>{{ menu_settings.home_page_text }}</h1>#}
-    {#                            <a href="{% url 'blogs:about' %}" class="banner__btn_href mt-4 text-decoration-none">#}
-    {#                                {% trans 'Learn more' %}#}
-    {#                                <i class="far fa-long-arrow-right"></i>#}
-    {#                            </a>#}
-    {#                        </div>#}
-    {#                    </div>#}
-    {#                    <a href="#news" class="box">#}
-    {#                        <span></span>#}
-    {#                        <span></span>#}
-    {#                        <span></span>#}
-    {#                    </a>#}
-    {#                </div>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </Section>#}
