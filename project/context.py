@@ -1,6 +1,8 @@
 from blogs import models
 
 
+# context for home page models
+
 def defaults(req):
     return {
         "menus": models.Menu.objects.filter(parent__isnull=True),

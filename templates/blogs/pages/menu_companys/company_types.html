@@ -40,18 +40,18 @@
                 <div class="row">
                     {% if company_types %}
                         {% for item in company_types %}
-                            <div class="col-lg-4 col-md-6 col-12 pro___card mt-2">
+                            <div class="col-lg-3 col-md-6 col-12 pro___card mt-2">
                                 <div class="card__head h-100 bg-white shadow">
 
                                     <div class="card card-fath">
                                         {% if item.image %}
                                             <img class="image__proo" src="{{ item.image.url }}"
-                                                 alt="{{ item.title }}">
+                                                 alt="{{ item.title }}" style="height: 250px;">
                                         {% endif %}
                                     </div>
 
                                     <div class="card-body-description px-4">
-                                        <a href="{% url 'blogs:menu_companys' item.slug %}">
+                                        <a class="text-decoration-none" href="{% url 'blogs:menu_companys' item.slug %}">
                                             <h5>{{ item.name }}</h5>
                                         </a>
                                     </div>

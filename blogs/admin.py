@@ -8,6 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from . import models
 from .models import Contact
 
+# Admin decorations
 admin.site.site_header = _('Uzcharmsanoat admin panel')
 admin.site.site_title = _('Uzcharmsanoat Admin Portal')
 admin.site.index_title = _('Welcome to Uzcharmsanoat Portal')
@@ -46,8 +47,9 @@ class MenuAdmin(parler_admin.TranslatableAdmin, mptt_admin.DraggableMPTTAdmin):
 
 
 @admin.register(models.MenuOverlay)
-class MenuOverlay(TranslatableAdmin):
+class MenuOverlay(TranslatableAdmin, mptt_admin.DraggableMPTTAdmin):
     pass
+
 
 @admin.register(models.Banner)
 class Banner(TranslatableAdmin):

@@ -29,7 +29,7 @@
 .over-lay {
     position: fixed;
     padding: 6em;
-    background-color: #183b8ced;
+    background: #0b0c66;
     color: #fff !important;
     transition: all .4s ease-in-out;
     height: 100vh;
@@ -46,6 +46,8 @@
 }
 
 .over-lay .cross {
+    height: 15px;
+    width: 15px;
     cursor: pointer;
     float: right;
     filter: invert(1);
@@ -73,24 +75,19 @@
 
 .insite-menu-mega ul li a {
     color: #fff;
-    font-size: 16px;
+    font-size: 19px;
     text-decoration: none;
     transition: all .4s;
-    line-height: 3;
+    line-height: 2;
 }
 
 .insite-menu-mega ul li a {
     transition: all .5s;
 }
 
-.insite-menu-mega ul li a .fa-arrow-right {
-    opacity: 0;
-    transition: all .5s;
-}
 
-.insite-menu-mega ul li:hover a .fa-arrow-right {
-    opacity: 1;
-    transform: translate(20px, 0px);
+.insite-menu-mega ul li a:hover {
+    color: #ffcc0f;
 }
 
 .drop-li {
@@ -3330,8 +3327,8 @@ select:focus {
 
 .news .container .row .owl-carousel .owl-nav {
     position: absolute;
-    top: -14%;
-    right: 39px;
+    top: -16%;
+    right: 12px;
 }
 
 .news .owl-carousel .owl-nav .owl-prev {
@@ -3678,13 +3675,24 @@ select:focus {
     z-index: 1;
 }
 
+.new-carousel .owl-item img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 309px;
+    object-position: center;
+}
+
+.img__drop__btn{
+    height: 47px;
+    width: 48px;
+    object-fit: contain;
+}
+
 .news-home__image {
-    min-height: 200px;
-    max-height: 200px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
+
+    width: 100%;
+    height: 300px;
 }
 
 .news-home__image img {

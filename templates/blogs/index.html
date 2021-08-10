@@ -34,7 +34,13 @@
             {% for banner in banners %}
             <div class="item">
                 <img src="{{ banner.banner_carousel.url }}" alt="">
-                <div class="text-teaser"><span>{{ banner.text }}</span></div>
+                <div class="text-teaser">
+                    <span>
+                        {% if banner.text %}
+                            {{ banner.text }}
+                        {% endif %}
+                    </span>
+                </div>
             </div>
             {% endfor %}
         </div>
@@ -46,13 +52,12 @@
             <div class="row m-auto">
 
                 {% for item in short_links %}
-                    <div class="col-lg-4 col-12 col-md-6 mb-3 res-drop-group">
+                    <div class="col-lg-4 col-12 col-md-4 mb-3 res-drop-group">
                         <div class="dropdown">
                             <button data-aos="fade-up" class="btn drop-tog w-100" type="button"
                                     id="dropdownMenuButton{{ forloop.counter }}" data-toggle="dropdown"
                                     aria-expanded="false">
-                                <img src="{% static 'assets/images/img-gallery/red-house.svg' %}" class="mr-auto"
-                                     alt="">
+                                <img src="{{ item.icon.url }}" class="mr-auto img__drop__btn" alt="">
                                 <span>{{ item.name }}</span>
                                 <i class="far fa-chevron-down ml-auto"></i>
                             </button>
@@ -67,30 +72,6 @@
                     </div>
                 {% endfor %}
 
-                {#                                {% for item in company_info %}#}
-                {#                                    <div class="col-md-12 mb-5 pb-5 ass" id="about">#}
-                {#                                        <div class="card asosation border-0">#}
-                {#                                            <div class="card-body">#}
-                {#                                                <div class="row">#}
-                {#                                                    <div class="col-md-6 about-order" data-aos="fade-up">#}
-                {#                                                        <h1>{% trans 'ОБ АССОЦИАЦИИ' %}</h1>#}
-                {#                                                        <div class="border_top"></div>#}
-                {#                                                        <h3>#}
-                {#                                                            {{ item.intro_about_us }}#}
-                {#                                                        </h3>#}
-                {#                                                        <a href="{% url 'blogs:about' %}" data-aos="fade-down">#}
-                {#                                                            подробнее <i class="far fa-long-arrow-right"></i>#}
-                {#                                                        </a>#}
-                {#                                                    </div>#}
-                {#                                                    <div class="col-md-6 banner-col-asosa" id="tilt">#}
-                {#                                                        <img class="img-fluid" src="{% static 'assets/images/logobino.png' %}"#}
-                {#                                                             data-aos="flip-left" data-aos-duration="1000" alt="">#}
-                {#                                                    </div>#}
-                {#                                                </div>#}
-                {#                                            </div>#}
-                {#                                        </div>#}
-                {#                                    </div>#}
-                {#                                {% endfor %}#}
             </div>
         </div>
     </section>
@@ -98,9 +79,9 @@
     <section class="news pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-12" id='news' data-aos="fade-up">
+                <div class="col-md-12 mb-5" id='news' data-aos="fade-up">
                     <h1>{% trans 'All news' %}</h1>
-                    <div class="mx-auto border_bot mb-5"></div>
+                    <div class="mx-auto border_bot"></div>
                 </div>
 
                 <div class="new-carousel owl-carousel owl-theme col-md-12">
@@ -112,11 +93,13 @@
                                 </div>
                                 <div class="news-home__teaser">
                                     <p>{{ link.short_description|safe }}</p>
-                                    <span class="news-home__date">{% trans 'Нашр этилган' %} {{ link.created|date:"d M" }}</span></div>
+                                    <span class="news-home__date">{% trans 'Нашр этилган' %} {{ link.created|date:"d M" }}</span>
+                                </div>
                             </div>
                         </a>
                     {% endfor %}
                 </div>
+                
                 <div class="batafsil-btn mx-auto mt-5"
                      data-aos="fade-up">
                     <a href="{% url 'blogs:news_list' %}">{% trans 'All news' %}
@@ -125,6 +108,53 @@
             </div>
         </div>
     </section>
+
+
+    <section class="statistics"
+    style="background: linear-gradient(
+       0deg
+       , rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(
+       0deg
+       , rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(
+       0deg
+       , rgba(49, 62, 78, 0.4), rgba(49, 62, 78, 0.4)), url('{{ menu_settings.site_background.url }}'); background-attachment: fixed;background-size: cover;">
+<div class="container">
+
+   <div class="col-md-12 mb-5 text-center" data-aos="fade-up">
+       <div class="col-md-12 text-center" data-aos="fade-up">
+           <h1 class="text-uppercase media-video text-white">{% trans 'Statistics' %}</h1>
+           <div class="border-media mx-auto"></div>
+       </div>
+
+       <div class="statistics__wrapper" id="counter">
+           <div class="row">
+               {% for item in infographics %}
+                   <div data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        class="statistics__card col-lg-3 col-md-6 col-12 aos-init">
+                       <div class="statistics__card-content clearfix">
+
+                           <i class="fa fas {{ item.icon }}"></i>
+                           <h6>{{ item.title }}</h6>
+                           <div class="statistics__count" data-num="{{ item.value }}">0</div>
+                       </div>
+                   </div>
+               {% endfor %}
+
+
+               {#//// statistics a href //////#}
+               <div class="col-md-12 mt-5">
+                   <a href="{% url 'blogs:statistic_list' %}" data-aos="fade-up"
+                      class="faqs-button mx-auto text-decoration-none text-white">
+                       {% trans 'more...' %}
+                       <i class="far fa-long-arrow-right"></i>
+                   </a>
+               </div>
+               {#//// statistics //////#}
+           </div>
+       </div>
+   </div>
+</div>
+</section>
 
     <section class="productss">
         <div class="container">
@@ -223,46 +253,7 @@
         </div>
     </section>
 
-    <section class="statistics"
-             style="background: url('{{ menu_settings.site_background.url }}'); background-attachment: fixed;background-repeat: no-repeat;
-             background-size: cover;">
-        <div class="container">
-
-            <div class="col-md-12 mb-5 text-center" data-aos="fade-up">
-                <div class="col-md-12 text-center" data-aos="fade-up">
-                    <h1 class="text-uppercase media-video text-white">{% trans 'Statistics' %}</h1>
-                    <div class="border-media mx-auto"></div>
-                </div>
-
-                <div class="statistics__wrapper" id="counter">
-                    <div class="row">
-                        {% for item in infographics %}
-                            <div data-aos="zoom-in" data-aos-easing="ease-in-out"
-                                 class="statistics__card col-lg-3 col-md-6 col-12 aos-init">
-                                <div class="statistics__card-content clearfix">
-
-                                    <i class="fa fas {{ item.icon }}"></i>
-                                    <h6>{{ item.title }}</h6>
-                                    <div class="statistics__count" data-num="{{ item.value }}">0</div>
-                                </div>
-                            </div>
-                        {% endfor %}
-
-
-                        {#//// statistics a href //////#}
-                        <div class="col-md-12">
-                            <a href="{% url 'blogs:statistic_list' %}" data-aos="fade-up"
-                               class="faqs-button mx-auto text-decoration-none text-white">
-                                {% trans 'more...' %}
-                                <i class="far fa-long-arrow-right"></i>
-                            </a>
-                        </div>
-                        {#//// statistics //////#}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <section class="faq" style="background: url('{% static 'assets/images/img-gallery/faq_charm.png' %}')">
         <div class="container">
@@ -304,11 +295,17 @@
 
     <section class="top-expo">
         <div class="expo"
-             style="background-image: url('{{ menu_settings.site_background2.url }}');background-attachment: fixed">
+             style="background-image: linear-gradient(
+                0deg
+                , rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(
+                0deg
+                , rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(
+                0deg
+                , rgba(49, 62, 78, 0.4), rgba(49, 62, 78, 0.4)), url('{{ menu_settings.site_background2.url }}');background-attachment: fixed; background-size: cover;">
             <div class="container">
                 <div class="row">
                     {% for item in expolinks %}
-                        <div class="col-md-4 text-center">
+                        <div class="col-md-3 col-lg-3 col-12 text-center">
                             <a href="{{ item.link_to_website }}" class="text-decoration-none">
                                 <img data-aos="fade-up" class="img-expo"
                                      src="{{ item.image.url }}"
@@ -544,4 +541,8 @@
             </div>
         </div>
     </section>
+
+<script>
+    document.getElementById("jqvmap1_item12").click();
+</script>
 {% endblock %}

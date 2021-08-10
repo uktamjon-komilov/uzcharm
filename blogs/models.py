@@ -1,3 +1,4 @@
+from django.db.models.fields.files import ImageField
 import parler.models
 from django.db import models
 from django.utils import timezone
@@ -14,20 +15,24 @@ from slugify import slugify
 from . import managers
 
 
+# class for published manager
 class PublishedManager(models.Manager):
     def get_queryset(self):
         return super(PublishedManager, self).get_queryset().filter(status='published')
 
 
+# class for translatable published manager
 class TranslatablePublishedManager(parler_managers.TranslatableManager):
     def get_queryset(self):
         return super().get_queryset().filter(status='published')
 
 
+# function generate slug
 def generate_slug(obj):
     return slugify(obj.title)
 
 
+# News model
 class Post(parler_models.TranslatableModel):
     STATUS_CHOICES = (
         ('published', 'Published'),
@@ -40,14 +45,11 @@ class Post(parler_models.TranslatableModel):
     )
 
     slug = models.SlugField(max_length=200, null=True)
-    # slug = AutoSlugField(populate_from=generate_slug, always_update=True, max_length=250),
     image = models.ImageField(null=True, upload_to='images/')
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='published', verbose_name=_('status'))
-
-    # objects = models.Manager()  # The default manager.
     published = TranslatablePublishedManager()
 
     def get_absolute_url(self):
@@ -62,6 +64,7 @@ class Post(parler_models.TranslatableModel):
         return self.title
 
 
+# tender model
 class Tender(parler_models.TranslatableModel):
     STATUS_CHOICES = (
         ('published', 'Published'),
@@ -73,14 +76,11 @@ class Tender(parler_models.TranslatableModel):
         main_text=ckeditor_uploader_fields.RichTextUploadingField(null=True, verbose_name=_("Full text"))
     )
     slug = models.SlugField(max_length=200, null=True)
-    # slug = AutoSlugField(populate_from=generate_slug, always_update=True, max_length=250)
     image = models.ImageField(null=True, upload_to='images/')
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='published')
-
-    # objects = models.Manager()
     published = TranslatablePublishedManager()
 
     def get_absolute_url(self):
@@ -95,20 +95,17 @@ class Tender(parler_models.TranslatableModel):
         return self.title
 
 
+# product model
 class Product(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250),
         main_text=ckeditor_uploader_fields.RichTextUploadingField(null=True, verbose_name=_("Full text"))
     )
     slug = models.SlugField(max_length=200, null=True)
-    # slug = AutoSlugField(populate_from=generate_slug, always_update=True, max_length=250)
     image = models.ImageField(null=True, upload_to='images/')
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-
-    # objects = models.Manager()
-    # published = TranslatablePublishedManager()
 
     def get_absolute_url(self):
         return reverse('blogs:', args=[self.publish.year, self.publish.month, self.publish.day, self.slug])
@@ -122,6 +119,7 @@ class Product(parler_models.TranslatableModel):
         return self.title
 
 
+# usefullink model
 class UsefulLink(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250)
@@ -137,6 +135,7 @@ class UsefulLink(parler_models.TranslatableModel):
         verbose_name_plural = _('Useful Links')
 
 
+# ExpoLink model
 class ExpoLink(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250)
@@ -152,6 +151,7 @@ class ExpoLink(parler_models.TranslatableModel):
         verbose_name_plural = _('Expo Links')
 
 
+# Partner model
 class Partner(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         name_of_partner=models.CharField(max_length=250, verbose_name='Name of Partner'),
@@ -170,6 +170,7 @@ class Partner(parler_models.TranslatableModel):
         verbose_name_plural = _('Partners')
 
 
+# Vacancy model
 class Vacancy(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250),
@@ -185,6 +186,7 @@ class Vacancy(parler_models.TranslatableModel):
         verbose_name_plural = _('Vacancys')
 
 
+# GalleryCategory model
 class GalleryCategory(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250)
@@ -204,13 +206,12 @@ class GalleryCategory(parler_models.TranslatableModel):
         verbose_name_plural = _("Gallery Categorys")
 
 
+# GalleryImage model
 class GalleryImage(parler_models.TranslatableModel):
-    # category = models.ForeignKey("GalleryCategory", on_delete=models.CASCADE, null=True)
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250),
     )
     slug = models.SlugField(max_length=200, null=True)
-    # slug = models.SlugField(max_length=100, unique=True, null=True)
     image = models.ImageField(null=True, upload_to='images/')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -234,6 +235,7 @@ class GalleryImage(parler_models.TranslatableModel):
         verbose_name_plural = _("Gallery Images")
 
 
+# Media model
 class Media(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250, null=True)
@@ -250,6 +252,7 @@ class Media(parler_models.TranslatableModel):
         verbose_name_plural = _("Media")
 
 
+# Infographic model
 class Infographic(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250, null=True),
@@ -268,6 +271,7 @@ class Infographic(parler_models.TranslatableModel):
         verbose_name_plural = _("Infographics")
 
 
+# StaticContent model
 class StaticContent(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=255, null=True),
@@ -285,6 +289,7 @@ class StaticContent(parler_models.TranslatableModel):
         verbose_name_plural = _("Static Contents")
 
 
+# LegalDocument
 class LegalDocument(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=255, null=True),
@@ -302,6 +307,7 @@ class LegalDocument(parler_models.TranslatableModel):
         verbose_name_plural = _("Legal Documents")
 
 
+# Statistic model
 class Statistic(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=255, null=True),
@@ -319,6 +325,7 @@ class Statistic(parler_models.TranslatableModel):
         verbose_name_plural = _("Statistics")
 
 
+# Menu model
 class Menu(mptt_models.MPTTModel, parler_models.TranslatableModel):
     parent = models.ForeignKey('self', related_name='children', on_delete=models.CASCADE, null=True, blank=True)
     translations = parler_models.TranslatedFields(
@@ -335,12 +342,14 @@ class Menu(mptt_models.MPTTModel, parler_models.TranslatableModel):
         verbose_name_plural = _("Menu items")
 
 
+# ShortLink model
 class ShortLink(mptt_models.MPTTModel, parler_models.TranslatableModel):
     parent = models.ForeignKey('self', related_name='children', on_delete=models.CASCADE, null=True, blank=True)
     translations = parler_models.TranslatedFields(
         name=models.CharField(blank=False, default='', max_length=128),
     )
     url = models.CharField(blank=True, null=True, default='', max_length=128)
+    icon = models.ImageField(blank=True, null=True, verbose_name=_('Icon'))
     objects = managers.CustomMpttManager()
 
     def __str__(self):
@@ -351,6 +360,7 @@ class ShortLink(mptt_models.MPTTModel, parler_models.TranslatableModel):
         verbose_name_plural = _("ShortLink items")
 
 
+# Staff model
 class Staff(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         name=models.CharField(max_length=255, null=True),
@@ -373,6 +383,7 @@ class Staff(parler_models.TranslatableModel):
         verbose_name_plural = _('Staffs')
 
 
+# CompanyInfo model
 class CompanyInfo(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         intro_about_us=models.TextField(null=True),
@@ -389,6 +400,7 @@ class CompanyInfo(parler_models.TranslatableModel):
         verbose_name_plural = _('Company Infos')
 
 
+# FAQ model
 class FAQ(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         question=models.CharField(max_length=255, null=True),
@@ -405,6 +417,7 @@ class FAQ(parler_models.TranslatableModel):
         return self.question
 
 
+# SiteSetting model
 class SiteSetting(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         address=models.CharField(max_length=255, null=True, blank=True)
@@ -421,6 +434,7 @@ class SiteSetting(parler_models.TranslatableModel):
         verbose_name_plural = _('Site Settings')
 
 
+# Exhibition model
 class Exhibition(parler_models.TranslatableModel):
     STATUS_CHOICES = (
         ('published', 'Published'),
@@ -437,7 +451,6 @@ class Exhibition(parler_models.TranslatableModel):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='published')
-    # objects = models.Manager()
     published = TranslatablePublishedManager()
 
     def get_absolute_url(self):
@@ -452,6 +465,7 @@ class Exhibition(parler_models.TranslatableModel):
         verbose_name_plural = _('Exhibitions')
 
 
+# VirtualReception model
 class VirtualReception(models.Model):
     GENDER_CHOICES = (
         ('male', 'Male'),
@@ -498,6 +512,7 @@ class VirtualReception(models.Model):
         verbose_name_plural = _("Virtual Reception")
 
 
+# VirtualReceptionFormData model
 class VirtualReceptionFormData(models.Model):
     full_name = models.CharField(max_length=255)
     email = models.EmailField()
@@ -517,6 +532,7 @@ class VirtualReceptionFormData(models.Model):
     def __str__(self): return f"{self.full_name} - {self.subject}"
 
 
+# Contact model
 class Contact(models.Model):
     full_name = models.CharField(max_length=255, verbose_name=_('full_name'))
     email = models.EmailField()
@@ -531,6 +547,7 @@ class Contact(models.Model):
         verbose_name_plural = _("Contacts")
 
 
+# ContactFormData model
 class ContactFormData(models.Model):
     full_name = models.CharField(max_length=255, verbose_name=_('full_name'))
     phone = models.CharField(max_length=255, verbose_name=_('phone'))
@@ -545,6 +562,7 @@ class ContactFormData(models.Model):
     def __str__(self): return f"{self.full_name} - {self.subject}"
 
 
+# Legislation model
 class Legislation(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250, null=True, verbose_name=_('Title')),
@@ -559,6 +577,7 @@ class Legislation(parler_models.TranslatableModel):
         verbose_name_plural = _('Legislations')
 
 
+# RegionalAdministration model
 class RegionalAdministration(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250, null=True, verbose_name=_('Title')),
@@ -573,6 +592,7 @@ class RegionalAdministration(parler_models.TranslatableModel):
         verbose_name_plural = _('Regional Administration')
 
 
+# MenuSettings model
 class MenuSettings(parler_models.TranslatableModel):
     """ MENU SITE SETTINGS MODEL """
     translations = parler_models.TranslatedFields(
@@ -597,15 +617,16 @@ class MenuSettings(parler_models.TranslatableModel):
     telegram = models.URLField(max_length=500, blank=True, null=True)
     youtube = models.URLField(max_length=500, blank=True, null=True)
 
-    site_background = models.ImageField(upload_to='images/', null=True, verbose_name=_('Site Background'))
-    site_background2 = models.ImageField(upload_to='images/', null=True, verbose_name=_('Site Background 2'))
+    site_background = models.ImageField(upload_to='images/', null=True, verbose_name=_('Site Background'), blank=True)
+    site_background2 = models.ImageField(upload_to='images/', null=True, verbose_name=_('Site Background 2'), blank=True)
 
 
-class Meta:
-    verbose_name = _('Menu Settings')
-    verbose_name_plural = _('Menu Settings')
+    class Meta:
+        verbose_name = _('Menu Settings')
+        verbose_name_plural = _('Menu Settings')
 
 
+# Banner model
 class Banner(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         text=models.CharField(max_length=250, blank=True, null=True, verbose_name=_('Text'))
@@ -617,6 +638,7 @@ class Banner(parler_models.TranslatableModel):
         verbose_name_plural = _('Banners')
 
 
+# Region model
 class Region(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         Andijan=models.CharField(max_length=255, blank=True, null=True, verbose_name=_('Andijan')),
@@ -658,31 +680,39 @@ class Region(parler_models.TranslatableModel):
         verbose_name_plural = _('Regions')
 
 
-class MenuOverlay(parler_models.TranslatableModel):
+# MenuOverlay model
+class MenuOverlay(mptt_models.MPTTModel, parler_models.TranslatableModel):
+    parent = models.ForeignKey('self', related_name='children', on_delete=models.CASCADE, null=True, blank=True)
     translations = parler_models.TranslatedFields(
         title=models.CharField(max_length=250, blank=True, null=True, verbose_name=_('title'))
     )
     link = models.CharField(max_length=250, blank=True, null=True, verbose_name=_('link'))
 
+    objects = managers.CustomMpttManager()
+
     def __str__(self):
-        return self.title
+        return str(self.title)
 
     class Meta:
         verbose_name = _('Menu Overlay')
 
-
+# HowToJoin model
 class HowToJoin(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         content=ckeditor_uploader_fields.RichTextUploadingField(null=True, verbose_name=_("Content"))
     )
 
     def __str__(self):
-        return self.content
+        if len(str(self.content)) < 50:
+            return str(self.content)
+        else:
+            return str(self.content)[:50] + "..."
 
     class Meta:
         verbose_name = _('How to join')
 
 
+# CompanyTypes model
 class CompanyTypes(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         name=models.CharField(max_length=255, verbose_name=_("name"))
@@ -692,6 +722,7 @@ class CompanyTypes(parler_models.TranslatableModel):
     slug = models.SlugField(verbose_name=_("slug"))
 
 
+# MenuCompanys model
 class MenuCompanys(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         stir=models.CharField(max_length=20, verbose_name=_('stir')),
@@ -708,6 +739,7 @@ class MenuCompanys(parler_models.TranslatableModel):
         verbose_name = _('Menu Companys')
 
 
+# BenefitsAdmin model
 class BenefitsAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=140, null=True, verbose_name=_('Title')),
@@ -721,6 +753,7 @@ class BenefitsAdmin(parler_models.TranslatableModel):
         verbose_name = _('Benefits')
 
 
+# StructureAdmin model
 class StructureAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name='title')
@@ -734,6 +767,7 @@ class StructureAdmin(parler_models.TranslatableModel):
         verbose_name = _('Structure')
 
 
+# HistoryAdmin model
 class HistoryAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -747,6 +781,7 @@ class HistoryAdmin(parler_models.TranslatableModel):
         verbose_name = _('History of Organization')
 
 
+# TerritorialAdmin model
 class TerritorialAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -760,6 +795,7 @@ class TerritorialAdmin(parler_models.TranslatableModel):
         verbose_name = _('Territorial Administration')
 
 
+# SubsidariesAdmin model
 class SubsidariesAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -773,6 +809,7 @@ class SubsidariesAdmin(parler_models.TranslatableModel):
         verbose_name = _('Subsidaries')
 
 
+# Subsidaries2Admin model
 class Subsidaries2Admin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -786,6 +823,7 @@ class Subsidaries2Admin(parler_models.TranslatableModel):
         verbose_name = _('Subsidaries2')
 
 
+# ForeighnAdmin  model
 class ForeighnAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -799,6 +837,7 @@ class ForeighnAdmin(parler_models.TranslatableModel):
         verbose_name = _('Foreighn Representation')
 
 
+# PressServiceAdmin model
 class PressServiceAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -812,6 +851,7 @@ class PressServiceAdmin(parler_models.TranslatableModel):
         verbose_name = _('Press service')
 
 
+# MoscowAdmin model
 class MoscowAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -825,6 +865,7 @@ class MoscowAdmin(parler_models.TranslatableModel):
         verbose_name = _('Moscow')
 
 
+# EventsAdmin model
 class EventsAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -833,10 +874,14 @@ class EventsAdmin(parler_models.TranslatableModel):
     image = models.ImageField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = _('EventsAdmin')
 
 
+# InvestmentPotentialAdmin model
 class InvestmentPotentialAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -845,14 +890,15 @@ class InvestmentPotentialAdmin(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Investment potential')
+    class Meta:
+        verbose_name = _('Investment potential')
 
 
+# ExportPotentialAdmin model
 class ExportPotentialAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -861,14 +907,15 @@ class ExportPotentialAdmin(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Export Potential')
+    class Meta:
+        verbose_name = _('Export Potential')
 
 
+# ExportImplementationAdmin model
 class ExportImplementationAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -877,14 +924,15 @@ class ExportImplementationAdmin(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Export Implementation')
+    class Meta:
+        verbose_name = _('Export Implementation')
 
 
+# ExportLawAdmin model
 class ExportLawAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -893,14 +941,15 @@ class ExportLawAdmin(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Export Law')
+    class Meta:
+        verbose_name = _('Export Law')
 
 
+# MarketEntryStrategies moodel
 class MarketEntryStrategies(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -909,14 +958,15 @@ class MarketEntryStrategies(parler_models.TranslatableModel):
     media = models.FileField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Market entry strategies')
+    class Meta:
+        verbose_name = _('Market entry strategies')
 
 
+# PresentationsAdmin model
 class PresentationsAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -931,6 +981,7 @@ class PresentationsAdmin(parler_models.TranslatableModel):
         verbose_name = _('Presentations')
 
 
+# PressReleasesAdmin model
 class PressReleasesAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -945,6 +996,7 @@ class PressReleasesAdmin(parler_models.TranslatableModel):
         verbose_name = _('Press Releases')
 
 
+# YouthPolicyAdmin model
 class YouthPolicyAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -958,6 +1010,7 @@ class YouthPolicyAdmin(parler_models.TranslatableModel):
         verbose_name = _('Youth Policy')
 
 
+# PublicationsAdmin model
 class PublicationsAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -972,6 +1025,7 @@ class PublicationsAdmin(parler_models.TranslatableModel):
         verbose_name = _('Publications')
 
 
+# InvestorsAdmin model
 class InvestorsAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),
@@ -983,14 +1037,15 @@ class InvestorsAdmin(parler_models.TranslatableModel):
     image4 = models.ImageField(null=True, upload_to='images/')
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = _('Investors')
+    class Meta:
+        verbose_name = _('Investors')
 
 
+# ExportersAdmin model
 class ExportersAdmin(parler_models.TranslatableModel):
     translations = parler.models.TranslatedFields(
         title=models.CharField(max_length=200, blank=True, null=True, verbose_name=_('title')),

@@ -29,7 +29,7 @@ $(document).ready(function () {
         $('a#back-top').click(function () {
             $('body,html').animate({
                 scrollTop: 0
-            }, 800);
+            }, 200);
             return false;
         });
     });
@@ -241,3 +241,5 @@ if ($('.search-popup__overlay').length) {
         e.preventDefault();
     });
 }
+
+$("#jqvmap1_item12").click();

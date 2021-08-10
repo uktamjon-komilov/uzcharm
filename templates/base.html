@@ -30,12 +30,13 @@
 </head>
 <body>
 
+{#brinchi kok navbar#}
+
 <section class="header">
     <div class="container">
         <div class="menu">
             <div class="menu_left">
                 <ul>
-
                     <li class="list-text">
                         <a href="{% url 'blogs:contact_form' %}" class="border-menu-int">
                             <img class="white-bag" src="{% static 'assets/images/Group__con.svg' %}" alt="images">
@@ -82,15 +83,18 @@
             <div class="menu_right">
                 <ul class="p-0">
                     <li>
-                        <a href="{% reverse_lang request 'uz' %}" class="{% if request.LANGUAGE_CODE == 'uz' %}active-lang{% endif %}">UZ</a>
+                        <a href="{% reverse_lang request 'uz' %}"
+                           class="{% if request.LANGUAGE_CODE == 'uz' %}active-lang{% endif %}">UZ</a>
                         <a href="#" class="language-slesh">/</a>
                     </li>
                     <li>
-                        <a href="{% reverse_lang request 'ru' %}" class="{% if request.LANGUAGE_CODE == 'ru' %}active-lang{% endif %}">RU</a>
+                        <a href="{% reverse_lang request 'ru' %}"
+                           class="{% if request.LANGUAGE_CODE == 'ru' %}active-lang{% endif %}">RU</a>
                         <a href="#" class="language-slesh">/</a>
                     </li>
                     <li>
-                        <a href="{% reverse_lang request 'en' %}" class="{% if request.LANGUAGE_CODE == 'en' %}active-lang{% endif %}">EN</a>
+                        <a href="{% reverse_lang request 'en' %}"
+                           class="{% if request.LANGUAGE_CODE == 'en' %}active-lang{% endif %}">EN</a>
                     </li>
                 </ul>
             </div>
@@ -98,6 +102,11 @@
     </div>
 </section>
 
+
+{#brinchi kok navbar tugadi#}
+
+
+{#logo va register joylashgan joy#}
 <section class="header-middle">
     <div class="container">
         <div class="row style__columns">
@@ -139,6 +148,10 @@
     </div>
 </section>
 
+{#logo va register joylashgan joy tugadi#}
+
+
+{#menu likla#}
 <section class="nav-bottom">
     <div class="container">
         <div class="row">
@@ -211,7 +224,7 @@
                             <script>
                                 let menulinks = document.querySelectorAll(".nav-link");
                                 menulinks.forEach((link) => {
-                                    if(link.innerHTML.search("lex.uz") !== -1){
+                                    if (link.innerHTML.search("lex.uz") !== -1) {
                                         link.setAttribute("href", "https://lex.uz");
                                     }
                                 });
@@ -247,7 +260,10 @@
     </div>
 </section>
 
+{#menu likla tugadi#}
 
+
+{#hamburger mega menu#}
 <div id="overlay" class="over-lay">
     <svg class="cross" id="close" width="33" height="33" viewBox="0 0 18 17" fill="none"
          xmlns="http://www.w3.org/2000/svg">
@@ -256,22 +272,32 @@
     <div class="container overlay__con">
         <div class="row">
 
-        {% for menu in menu_links %}
-            <div class="col-lg-3 col-md-4 col-12 insite-menu-mega">
-                <ul>
-                    <li>
-                        <a href="https://{{ request.get_host }}/{% current_lang request %}/{{ menu.link }}">
-                            {{ menu.title }}
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </div>
-        {% endfor %}
-        
+            {% for menu in menu_links %}
+                {% if menu.children.all %}
+                    <div class="col-lg-4 col-md-4 col-12 insite-menu-mega mb-5">
+                        <ul>
+                            <h3 class="header-menu__nav-link" {% if menu.link %}
+                            href="https://{{ request.get_host }}/{% current_lang request %}/{{ menu.link }}" {% else %} {% endif %}>{{ menu.title }}</h3>
+                            {% if menu.children.all %}
+                                {% for child in menu.children.all %}
+                                    <li>
+                                        <a href="https://{{ request.get_host }}/{% current_lang request %}/{{ child.link }}">
+                                            {{ child.title }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+
         </div>
     </div>
 </div>
+{#hamburger mega menu tugadi#}
 
+
+{#poisk#}
 <div class="search-popup">
     <form action="{% url 'blogs:news_search_url' %}">
         <div class="search-popup__overlay custom-cursor__overlay">
@@ -285,9 +311,12 @@
         </div>
     </form>
 </div>
+{#poisk tugadi#}
 
 {% block content %}{% endblock %}
 
+
+{#footer#}
 <section class="footer mt-5">
     <div class="container-fluid">
         <div class="row">
@@ -398,6 +427,10 @@
     </div>
 </section>
 
+{#footer#}
+
+
+{#razmer kotta kichik qladigan#}
 <aside class="help">
     <ul class="m-0">
         <li class="help-item1 help-item" id='plus'>
@@ -422,6 +455,8 @@
         </li>
     </ul>
 </aside>
+
+{#razmer kotta kichik qladigan tugadi#}
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">

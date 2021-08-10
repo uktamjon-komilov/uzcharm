@@ -4,8 +4,9 @@ from . import views
 from blogs import views as contact_views
 from django.conf.urls import url, include, handler404, handler500
 
+# APP NAME
 app_name = 'blogs'
-
+# URLS
 urlpatterns = [
     path('', views.index_page, name='index'),
     path('about/', views.about_page, name='about'),
@@ -28,7 +29,6 @@ urlpatterns = [
 
     path('gallery/', views.GalleryListView.as_view(), name='gallery'),
 
-    # path('gallery/'), views.Gallery, name='gallery'),
     path('search/', views.NewsSearchView.as_view(), name='news_search_url'),
 
     path('media/', views.MediaListView.as_view(), name='media'),
@@ -45,7 +45,6 @@ urlpatterns = [
 
     path('press_service', views.press_service_view, name='press_service'),
 
-    # path('how_to_join/'), views.JoinView.as_view(), name='how_to_join'),
     path('how_to_join/', views.join_view, name='how_to_join'),
 
     path('moscow/', views.moscow_view, name='moscow'),
@@ -81,7 +80,7 @@ urlpatterns = [
     path('history_of_organization/', views.history_view, name='history_of_organization'),
 
     path('menu_companys/<type_slug>/', views.menu_companys_view, name='menu_companys'),
-    
+
     path('menu_companys/', views.companys_types_view, name='companys_types'),
 
     path('membership_procedure/', views.MembershipProcedureListView.as_view(), name='membership_procedure'),
@@ -99,8 +98,6 @@ urlpatterns = [
     path('market_entry_strategies/', views.market_entry_strategies_view, name='market_entry_strategies'),
 
     path('content/<slug:slug>', views.StaticContentView.as_view(), name='static_page'),
-
-    # path('legal/<slug:slug>'), views.LegalDocumentView.as_view(), name='legal'),
 
     path('legal/', views.LegalDocumentListView.as_view(), name='legal'),
 

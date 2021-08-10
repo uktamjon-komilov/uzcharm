@@ -1,3 +1,4 @@
+# imports for view
 from django.core import mail
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect, get_object_or_404
@@ -13,52 +14,21 @@ from .forms import ContactForm, VirtualReceptionForm
 from .models import Post, GalleryImage, GalleryCategory
 from . import models, forms
 
+###Pagination
 CONST_PAGINATOR_NUMBER = 10
 
 
-# class FormSubmitSendEmailFormView:
-#     def send_mail_to_receivers(self, request, form):
-#         # messages.add_message(request, messages.SUCCESS, _("Your appeal was sent successfully"))
-#         receivers = [r.mail for r in models.MessageReceiver.objects.filter(category=form.Meta.category_name)]
-#
-#         connection = mail.get_connection()
-#
-#         try:
-#             connection.open()
-#         except Exception as e:
-#             # messages.add_message(request, messages.ERROR, _('Sorry, at this time we can\'t receive your request.'))
-#             return False
-#
-#         attachment = None
-#
-#         email = mail.EmailMessage(
-#             subject=message_subject,
-#             body=message_text,
-#             from_email=settings.EMAIL_HOST_USER,
-#             to=receivers,
-#             connection=connection
-#         )
-#
-#         if attachment:
-#             email.attach(**attachment)
-#
-#         try:
-#             email.send()
-#         except:
-#             # messages.add_message(request, messages.ERROR, _('Sorry, we can\'t receive your request at this time'))
-#             return False
-#
-#         connection.close()
-#         return True
-
+# 404 page
 def error_404(request, exception):
     return render(request, 'errors/404.html')
 
 
+# 500 page
 def error_500(request):
     return render(request, 'errors/500.html', status=500)
 
 
+# Home page
 def index_page(request):
     context = {
         'useful_links': models.UsefulLink.objects.all(),
@@ -76,26 +46,27 @@ def index_page(request):
         'menu_links': models.MenuOverlay.objects.all(),
         'vacancys': models.Vacancy.objects.all(),
         'joins': models.HowToJoin.objects.all()
-        # 'regions': models.Region.objects.all(),
     }
     return render(request, 'blogs/index.html', context)
 
 
+# About page
 def about_page(request):
     context = {
         'vacancy': models.Vacancy.objects.all(),
         'items': models.CompanyInfo.objects.all(),
-        # 'employees': models.Staff.objects.all(),
         'legislation': models.Legislation.objects.all(),
         'regional': models.RegionalAdministration.objects.all(),
     }
     return render(request, 'blogs/pages/about/indexAbout.html', context)
 
 
+# Login Page
 def login_page(request):
     return render(request, 'blogs/pages/login/index.html')
 
 
+# Search
 class NewsSearchView(generic.ListView):
     queryset = models.Post.objects.filter()
     template_name = 'blogs/pages/news/search_post_result.html'
@@ -114,11 +85,7 @@ class NewsSearchView(generic.ListView):
         )
 
 
-# class JoinView(generic.TemplateView):
-#     template_name = 'blogs/pages/how_to_join/how_to_join.html'
-#     models = models.HowToJoin
-#     context_object_name = 'joins'
-
+# Join View
 def join_view(request):
     joins = models.HowToJoin.objects.all()
     context = {
@@ -127,6 +94,7 @@ def join_view(request):
     return render(request, "blogs/pages/how_to_join/how_to_join.html", context)
 
 
+# Structure Page
 def structure_view(request):
     structure = models.StructureAdmin.objects.all()
     context = {
@@ -135,6 +103,7 @@ def structure_view(request):
     return render(request, "blogs/pages/structure/structure.html", context)
 
 
+# History page
 def history_view(request):
     history = models.HistoryAdmin.objects.all()
     context = {
@@ -143,6 +112,7 @@ def history_view(request):
     return render(request, "blogs/pages/history_of_organization/history_of_organization.html", context)
 
 
+# Partners page
 def partners_view(request):
     partner = models.Partner.objects.all()
     context = {
@@ -151,6 +121,7 @@ def partners_view(request):
     return render(request, "blogs/pages/partners/partners.html", context)
 
 
+# Press service page
 def press_service_view(request):
     press_service = models.PressServiceAdmin.objects.all()
     context = {
@@ -159,6 +130,7 @@ def press_service_view(request):
     return render(request, "blogs/pages/press_service/press_service.html", context)
 
 
+# Moscow Page
 def moscow_view(request):
     moscow = models.MoscowAdmin.objects.all()
     context = {
@@ -167,6 +139,7 @@ def moscow_view(request):
     return render(request, "blogs/pages/press_service/press_service.html", context)
 
 
+# Benefits Page
 def benefits_view(request):
     benefits = models.BenefitsAdmin.objects.all()
     context = {
@@ -175,6 +148,7 @@ def benefits_view(request):
     return render(request, "blogs/pages/benefits/benefits.html", context)
 
 
+# Events Page
 def events_view(request):
     events = models.EventsAdmin.objects.all()
     context = {
@@ -183,6 +157,7 @@ def events_view(request):
     return render(request, "blogs/pages/events/events.html", context)
 
 
+# Presentations Page
 def presentations_view(request):
     presentations = models.PresentationsAdmin.objects.all()
     context = {
@@ -191,6 +166,7 @@ def presentations_view(request):
     return render(request, "blogs/pages/presentations/presentations.html", context)
 
 
+# Press Releases Page
 def press_releases_view(request):
     press_releases = models.PressReleasesAdmin.objects.all()
     context = {
@@ -199,6 +175,7 @@ def press_releases_view(request):
     return render(request, "blogs/pages/press_releases/press_releases.html", context)
 
 
+# Publications Page
 def publications_view(request):
     publications = models.PublicationsAdmin.objects.all()
     context = {
@@ -207,6 +184,7 @@ def publications_view(request):
     return render(request, "blogs/pages/publications/publications.html", context)
 
 
+# Youth Policy Page
 def youth_policy_view(request):
     youth_policy = models.YouthPolicyAdmin.objects.all()
     context = {
@@ -215,6 +193,7 @@ def youth_policy_view(request):
     return render(request, "blogs/pages/youth_policy/youth_policy.html", context)
 
 
+# Territorial Page
 def territorial_view(request):
     territorial = models.TerritorialAdmin.objects.all()
     context = {
@@ -223,6 +202,7 @@ def territorial_view(request):
     return render(request, "blogs/pages/territorial_administrations/territorial_administrations.html", context)
 
 
+# Investment Page
 def investmentadmin_view(request):
     potential = models.InvestmentPotentialAdmin.objects.all()
     context = {
@@ -231,6 +211,7 @@ def investmentadmin_view(request):
     return render(request, "blogs/pages/investment_potential/investment_potential.html", context)
 
 
+# Export Potential Page
 def export_potential_view(request):
     export_potential = models.ExportPotentialAdmin.objects.all()
     context = {
@@ -239,6 +220,7 @@ def export_potential_view(request):
     return render(request, "blogs/pages/export_potential/export_potential.html", context)
 
 
+# Export Implementation Page
 def export_implementation_view(request):
     export_implementation = models.ExportImplementationAdmin.objects.all()
     context = {
@@ -247,6 +229,7 @@ def export_implementation_view(request):
     return render(request, "blogs/pages/export_implementation/export_implementation.html", context)
 
 
+# Export Law
 def export_law_view(request):
     export_law = models.ExportLawAdmin.objects.all()
     context = {
@@ -255,10 +238,12 @@ def export_law_view(request):
     return render(request, "blogs/pages/export_law/export_law.html", context)
 
 
+# LEX UZ
 def lex_uz_view(request):
     return redirect("https://lex.uz")
 
 
+# Market Entry Strategies Page
 def market_entry_strategies_view(request):
     market_entry_strategies = models.MarketEntryStrategies.objects.all()
     context = {
@@ -267,6 +252,7 @@ def market_entry_strategies_view(request):
     return render(request, "blogs/pages/market_entry_strategies/market_entry_strategies.html", context)
 
 
+# Subsidaries Page
 def subsidaries_view(request):
     subsidaries = models.SubsidariesAdmin.objects.all()
     context = {
@@ -275,6 +261,7 @@ def subsidaries_view(request):
     return render(request, "blogs/pages/subsidaries/subsidaries.html", context)
 
 
+# Subsidaries 2 Page
 def subsidaries2_view(request):
     subsidaries2 = models.SubsidariesAdmin.objects.all()
     context = {
@@ -283,6 +270,7 @@ def subsidaries2_view(request):
     return render(request, "blogs/pages/subsidaries/subsidaries2.html", context)
 
 
+# Leadership Page
 def leadership_view(request):
     leadership = models.Staff.objects.all()
     context = {
@@ -291,6 +279,7 @@ def leadership_view(request):
     return render(request, "blogs/pages/about2/leadership.html", context)
 
 
+# Investors page
 def investors_view(request):
     investors = models.InvestorsAdmin.objects.all()
     context = {
@@ -299,6 +288,7 @@ def investors_view(request):
     return render(request, "blogs/pages/investors/investors.html", context)
 
 
+# Exporters Page
 def exporters_view(request):
     leadership = models.ExportersAdmin.objects.all()
     context = {
@@ -307,6 +297,7 @@ def exporters_view(request):
     return render(request, "blogs/pages/exporters/exporters.html", context)
 
 
+# Foreighn Representation Page
 def foreighn_view(request):
     foreighn = models.ForeighnAdmin.objects.all()
     context = {
@@ -315,6 +306,7 @@ def foreighn_view(request):
     return render(request, "blogs/pages/foreighn_representations/foreign_representations.html", context)
 
 
+# Company Types Page
 def companys_types_view(request):
     company_types = models.CompanyTypes.objects.all()
     context = {
@@ -323,11 +315,13 @@ def companys_types_view(request):
     return render(request, "blogs/pages/menu_companys/company_types.html", context)
 
 
+# Menu Companys Page
 def menu_companys_view(request, type_slug):
     stir = request.GET.get("stir", None)
     company_type = models.CompanyTypes.objects.filter(slug=type_slug).first()
     if stir:
-        menu_companys = models.MenuCompanys.objects.filter(translations__stir__contains=stir.strip(), company_type=company_type)
+        menu_companys = models.MenuCompanys.objects.filter(translations__stir__contains=stir.strip(),
+                                                           company_type=company_type)
     else:
         menu_companys = models.MenuCompanys.objects.filter(company_type=company_type)
     context = {
@@ -336,6 +330,7 @@ def menu_companys_view(request, type_slug):
     return render(request, "blogs/pages/menu_companys/menu_companys.html", context)
 
 
+# News List Page
 class NewsListView(generic.ListView):
     template_name = "blogs/pages/news/list.html"
     model = models.Post
@@ -346,18 +341,21 @@ class NewsListView(generic.ListView):
         return self.model.objects.filter(status='published')
 
 
+# News detail Page
 class NewsDetailView(generic.DetailView):
     template_name = "blogs/pages/news/detail.html"
     queryset = models.Post.published.all()
     context_object_name = 'post'
 
 
+# Static Content Page
 class StaticContentView(generic.DetailView):
     template_name = "blogs/pages/static_content/detail.html"
     queryset = models.StaticContent.objects.all()
     slug_url_kwarg = 'slug'
 
 
+# Statistic List Page
 class StatisticListView(generic.ListView):
     template_name = "blogs/pages/statistics/list.html"
     model = models.Statistic
@@ -365,12 +363,14 @@ class StatisticListView(generic.ListView):
     context_object_name = 'items'
 
 
+# Statistic Detail Page
 class StatisticDetailView(generic.DetailView):
     template_name = "blogs/pages/statistics/detail.html"
     queryset = models.Statistic.objects.all()
     context_object_name = 'item'
 
 
+# Tender List Page
 class TenderListView(generic.ListView):
     template_name = "blogs/pages/tender/list.html"
     model = models.Tender
@@ -381,12 +381,14 @@ class TenderListView(generic.ListView):
         return self.model.objects.filter()
 
 
+# Tender Detail Page
 class TenderDetailView(generic.DetailView):
     template_name = "blogs/pages/tender/detail.html"
     queryset = models.Tender.published.all()
     context_object_name = 'tender'
 
 
+# Product List page
 class ProductListView(generic.ListView):
     template_name = "blogs/pages/product/product_list.html"
     model = models.Product
@@ -395,6 +397,9 @@ class ProductListView(generic.ListView):
 
     def get_queryset(self):
         return self.model.objects.filter()
+
+
+# Membership List Page
 
 
 class MembershipListView(generic.ListView):
@@ -407,12 +412,13 @@ class MembershipListView(generic.ListView):
         return self.model.objects.filter()
 
 
+# Membership Detail Page
 class MembershipDetailView(generic.DetailView):
     template_name = "blogs/pages/membership/detail.html"
-    # queryset = models.Post.published.all()
     context_object_name = 'membership'
 
 
+# Vacancy List Page
 class VacancyListView(generic.ListView):
     template_name = "blogs/pages/vacancy/vacancy_list_view.html"
     model = models.Vacancy
@@ -423,6 +429,7 @@ class VacancyListView(generic.ListView):
         return self.model.objects.filter()
 
 
+# Legal Document List Page
 class LegalDocumentListView(generic.ListView):
     template_name = "blogs/pages/legaldocument/list.html"
     model = models.LegalDocument
@@ -433,12 +440,14 @@ class LegalDocumentListView(generic.ListView):
         return self.model.objects.filter()
 
 
+# Legal Documment Detail Page
 class LegalDocumentView(generic.DetailView):
     template_name = "blogs/pages/legaldocument/detail.html"
     queryset = models.LegalDocument.objects.all()
     slug_url_kwarg = 'slug'
 
 
+# Gallery List Page
 class GalleryListView(generic.ListView):
     template_name = "blogs/pages/gallery/indexG.html"
     model = models.GalleryImage
@@ -448,20 +457,8 @@ class GalleryListView(generic.ListView):
     def get_queryset(self):
         return self.model.objects.filter()
 
-    # def Gallery(request):
-    #     images = None
-    #     categories = GalleryCategory.get_all_categories()
-    #     categoryID = request.GET.get('category')
-    #     if categoryID:
-    #         images = GalleryImage.get_all_images_by_category_id(categoryID)
-    #     else:
-    #         images = GalleryImage.get_all_images()
-    #     data = {}
-    #     data['images'] = images
-    #     data['categories'] = categories
-    #     return render(request, 'blogs/pages/gallery/indexG.html', data)
 
-
+# Media List View
 class MediaListView(generic.ListView):
     template_name = "blogs/pages/video/index.html"
     model = models.Media
@@ -472,6 +469,7 @@ class MediaListView(generic.ListView):
         return self.model.objects.filter()
 
 
+# FAQ List Page
 class FAQListView(generic.ListView):
     template_name = "blogs/pages/faq/list_view.html"
     model = models.FAQ
@@ -482,6 +480,7 @@ class FAQListView(generic.ListView):
         return self.model.objects.filter()
 
 
+# Virtual Reception Page
 def virtual_reception_view(request):
     context = {}
     form = VirtualReceptionForm()
@@ -491,22 +490,11 @@ def virtual_reception_view(request):
         print(temp)
     return render(request, "blogs/pages/virtual_reception/virtual_reception_form.html", context)
 
-    # class VirtualReceptionListView(generic.FormView):
-    #     template_name = "blogs/pages/virtual_reception/virtual_reception_form.html"
-    #     form_class = forms.VirtualReceptionForm
-    #     model = models.VirtualReceptionFormData
-    #
-    #     def get_context_data(self, **kwargs):
-    #         context = super().get_context_data(**kwargs)
-    #         context['number'] = "reception"
-    #         return context
 
-
+# Enterpreneurs List Page
 class EntrepreneursListView(generic.FormView):
     template_name = "blogs/pages/for_entrepreneurs/entrepreneurs.html"
     form_class = forms.ContactForm
-
-    # model = models.FAQ
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -514,6 +502,7 @@ class EntrepreneursListView(generic.FormView):
         return context
 
 
+# Membership Page
 class MembershipProcedureListView(generic.ListView):
     template_name = "blogs/pages/membership_procedure/membership_procedure.html"
     model = models.FAQ
@@ -522,14 +511,7 @@ class MembershipProcedureListView(generic.ListView):
         return self.model.objects.filter()
 
 
-# class BenefitTemplateView(generic.TemplateView):
-#     template_name = "blogs/pages/benefits/benefits.html"
-#     model = models.FAQ
-#
-#     def get_queryset(self):
-#         return self.model.objects.filter()
-
-
+# Exhibitions List page
 class ExhibitionListView(generic.ListView):
     template_name = "blogs/pages/exhibition/exhibition_list.html"
     model = models.Exhibition
@@ -540,19 +522,14 @@ class ExhibitionListView(generic.ListView):
         return self.model.objects.filter()
 
 
+# Exhibitions Paga
 class ExhibitionDetailView(generic.DetailView):
     template_name = "blogs/pages/exhibition/exhibition_detail.html"
     queryset = models.Exhibition.published.all()
     context_object_name = 'exhibition'
 
-    # class ExportImplementationProcedure(generic.DetailView):
-    #     template_name = "blogs/pages/export_implementation_procedure/index.html"
-    #     context_object_name = 'item'
-    #
-    #     def get_object(self, queryset=None):
-    #         return models.ExportImplementationProcedure.objects.first()
 
-
+# Contact Page
 def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

@@ -224,7 +224,6 @@ MESSAGE_TAGS = {
     messages.ERROR: "danger"
 }
 
-
 ACTIVE_LINK_CSS_CLASS = "active"
 
 
@@ -234,7 +233,7 @@ def rosetta_user(user, *args, **kwargs):
     else:
         return False
 
-ROSETTA_ACCESS_CONTROL_FUNCTION = rosetta_user
 
+ROSETTA_ACCESS_CONTROL_FUNCTION = rosetta_user
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
