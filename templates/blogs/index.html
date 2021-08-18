@@ -102,7 +102,7 @@
                 
                 <div class="batafsil-btn mx-auto mt-5"
                      data-aos="fade-up">
-                    <a href="{% url 'blogs:news_list' %}">{% trans 'All news' %}
+                    <a href="{% url 'blogs:news_list' %}">{% trans 'more...' %}
                         <i class="far fa-long-arrow-right"></i></a>
                 </div>
             </div>
@@ -139,17 +139,6 @@
                        </div>
                    </div>
                {% endfor %}
-
-
-               {#//// statistics a href //////#}
-               <div class="col-md-12 mt-5">
-                   <a href="{% url 'blogs:statistic_list' %}" data-aos="fade-up"
-                      class="faqs-button mx-auto text-decoration-none text-white">
-                       {% trans 'more...' %}
-                       <i class="far fa-long-arrow-right"></i>
-                   </a>
-               </div>
-               {#//// statistics //////#}
            </div>
        </div>
    </div>

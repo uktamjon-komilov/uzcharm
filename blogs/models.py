@@ -364,11 +364,11 @@ class ShortLink(mptt_models.MPTTModel, parler_models.TranslatableModel):
 class Staff(parler_models.TranslatableModel):
     translations = parler_models.TranslatedFields(
         name=models.CharField(max_length=255, null=True),
-        position=models.CharField(max_length=255, null=True)
+        position=models.CharField(max_length=255, null=True),
+        reception = models.CharField(max_length=255, blank=True, null=True)
     )
     image = models.ImageField(upload_to='uploads/staff_image/')
     phone_number = models.CharField(max_length=255, blank=True, null=True)
-    reception = models.CharField(max_length=255, blank=True, null=True)
     email = models.EmailField()
     order = models.PositiveIntegerField(default=0, blank=False, null=False)
     added = models.DateTimeField(auto_now_add=True)

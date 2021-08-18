@@ -17,21 +17,9 @@
 
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 mt-5 mb-3">
-                <h1 class="text-center photo__text">{% trans 'PHOTO GALLERY' %}</h1>
-                <div class="border-top-gallery mx-auto"></div>
+       
 
-{#                <div class="filter__tabs mt-5">#}
-{#                    <a href="/"><button class="filter__btn mb-3" data-filter="mockup">{% trans 'All' %}</button></a>#}
-{#                    {% for category in categories %}#}
-{#                    <a href="/?category={{ category.id }}"><button class="filter__btn mb-3" data-filter="mockup">{{ category.title }}</button></a>#}
-{#                    {% endfor %}#}
-{#                </div>#}
-            </div>
-        </div>
-
-        <div class="portfolio-container row">
+        <div class="portfolio-container row mt-5 ">
             {% for item in images %}
                 <div class="col-md-4 portfolio__item" data-category="ux">
                     <a data-fancybox="gallery" href="{{ item.image.url }}">

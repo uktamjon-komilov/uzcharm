@@ -1638,16 +1638,18 @@ ul.phone_number:before {
     margin-left: -98px;
     margin-top: 13px;
     border-radius: 0;
+    background-color: #183b8c!important;
 }
 
 .account__drop-menu {
     margin-top: 13px;
     border-radius: 0;
     margin-left: -39px;
+    background-color: #183b8c!important;
 }
 
 .account__drop-menu .dropdown-item {
-    color: #000 !important;
+    color: #fff !important;
 }
 
 .account__drop-menu .dropdown-item:hover {
@@ -1675,7 +1677,7 @@ ul.phone_number:before {
     font-size: 13px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding: 23px 6px 17px !important;
+    padding: 23px 5px 17px !important;
     transition: all .5s
 }
 
@@ -1975,7 +1977,6 @@ button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    transition: all .1s;
     background-color: RGBA(255, 255, 255, 0.3);
     justify-content: center;
     align-items: center;
@@ -2165,6 +2166,7 @@ button {
     display: flex;
     align-items: flex-end;
     padding-bottom: 30px;
+    justify-content: center;
 }
 
 .heading_news-all h1 {

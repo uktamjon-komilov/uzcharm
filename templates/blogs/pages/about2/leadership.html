@@ -81,13 +81,7 @@
     </section>
 
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 mt-5">
-                <h1 class="title__text_mem">{% trans 'LEADERSHIP' %}</h1>
-                <div class="border__membership mb-5 mx-auto"></div>
-            </div>
-
-
+        <div class="row mt-5">
             {% for staff in leadership %}
                 <div class="col-lg-6 col-md-12 col-12 mb-4">
                     <div class="person-list__wrapper">
@@ -104,7 +98,7 @@
                                 </div>
 
                                 <div class="person-list__days small-detail">
-                                    <span class="ml-4">{{ staff.reception }}+</span>
+                                    <span class="ml-4">{{ staff.reception }}</span>
                                 </div>
 
                                 <div class="person-list__number small-detail">

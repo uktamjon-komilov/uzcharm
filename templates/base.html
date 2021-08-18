@@ -244,10 +244,10 @@
                                         </button>
                                         <div class="dropdown-menu shadow w-auto account__drop-menu border-0 p-0"
                                              aria-labelledby="dropdownMenuButton">
-                                            <span class="dropdown-item">{% trans 'Hi' %}, {{ request.user.username }}</span>
-                                            <a class="dropdown-item"
+                                            <span style="font-size: 11px;" class="dropdown-item">{% trans 'Hi' %}, {{ request.user.username }}</span>
+                                            <a style="font-size: 11px;" class="dropdown-item"
                                                href="{% url 'profile' %}">{% trans 'Edit profile' %}</a>
-                                            <a class="dropdown-item" href="{% url 'logout' %}">{% trans 'Log out' %}</a>
+                                            <a style="font-size: 11px;" class="dropdown-item" href="{% url 'logout' %}">{% trans 'Log out' %}</a>
                                         </div>
                                     </div>
                                 </li>
@@ -305,7 +305,7 @@
         </div>
         <div class="search-popup__inner">
             <div class="search-popup__form">
-                <input type="text" name="search" placeholder="Type here to Search....">
+                <input type="text" name="search" placeholder="{% trans 'Type here to Search....' %}">
                 <button type="submit"><i class="fa fa-search help-icon"></i></button>
             </div>
         </div>
